@@ -1,8 +1,4 @@
 
-     
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,6 +63,30 @@
 
     .logo-banner-wrapper nav a:hover {
       color: var(--blue-dark);
+    }
+
+    /* ------------------------------- Back Button --------------------------------*/
+    .back-button {
+      margin: 20px;
+    }
+
+    .back-button a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--blue-dark);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .back-button img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .back-button a:hover {
+      color: var(--blue-light);
     }
 
     /* ------------------------------- Hero Section --------------------------------*/
@@ -171,6 +191,14 @@
       </nav>
     </div>
   </header>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">
+      <img src="images/backarrow.png" alt="Back">
+      Back to Home
+    </a>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
