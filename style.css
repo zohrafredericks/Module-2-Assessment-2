@@ -13,40 +13,34 @@ body, html {
 
 /* ------------------------------- Variables --------------------------------*/
 :root {
-  --turquoise-dark: #006666;           /* Dark turquoise from logo building */
-  --roof-gradient: linear-gradient(to right, #FF7F50, #FF4500); /* Roof gradient: orange to red */
-  --blue-light: #4A90E2;               /* Optional accent */
+  --blue-dark: #0B3D91;
+  --blue-light: #4A90E2;
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Full-Width Logo Header --------------------------------*/
+/* ------------------------------- Full-Width Logo Header (Top-Left) --------------------------------*/
 .logo-banner-wrapper {
-  position: relative;
-  text-align: center;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--blue-light);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.logo-banner {
-  width: 300px;       /* Use your image size */
+.logo-banner-wrapper .logo-banner {
+  width: 300px; /* fixed logo size */
   height: 300px;
-  display: block;
   object-fit: contain;
-  position: absolute;
-  top: 10px;
-  left: 10px;
 }
 
 .logo-banner-wrapper nav {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
   display: flex;
-  justify-content: center;
   gap: 25px;
+  margin-left: 20px; /* space between logo and nav */
 }
 
 .logo-banner-wrapper nav a {
-  color: var(--turquoise-dark);
+  color: white;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
@@ -55,26 +49,24 @@ body, html {
 }
 
 .logo-banner-wrapper nav a:hover {
-  background: var(--roof-gradient);
-  color: white;
-  border-radius: 6px;
-  padding: 5px 12px;
+  color: var(--blue-dark);
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to right, var(--turquoise-dark), #004C4C); /* subtle darker turquoise */
+  padding: 40px 20px;
+  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
   color: white;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-top: 20px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 10px;
   color: #e0f0ff;
 }
@@ -82,7 +74,7 @@ body, html {
 .btn-hero {
   display: inline-block;
   margin-top: 20px;
-  background: var(--roof-gradient);
+  background-color: var(--blue-dark);
   color: white;
   padding: 12px 25px;
   font-size: 1rem;
@@ -93,18 +85,18 @@ body, html {
 }
 
 .btn-hero:hover {
-  background-color: var(--turquoise-dark);
+  background-color: var(--blue-light);
 }
 
 /* ------------------------------- Sale Poster Section --------------------------------*/
 .sale-poster {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
   background-color: #f9fbff;
 }
 
 .poster-container img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -125,7 +117,7 @@ body, html {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--turquoise-dark);
+  color: var(--blue-dark);
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -136,12 +128,12 @@ body, html {
 }
 
 .back-button a:hover {
-  color: var(--roof-gradient);
+  color: var(--blue-light);
 }
 
 /* ------------------------------- Sections & Headings --------------------------------*/
 h2, h1 {
-  color: var(--turquoise-dark);
+  color: var(--blue-dark);
   text-align: center;
   margin: 40px 0 20px;
 }
@@ -191,7 +183,7 @@ p {
 }
 
 .featured-card h3, .prize-card h3 {
-  color: var(--turquoise-dark);
+  color: var(--blue-dark);
   margin-bottom: 5px;
 }
 
@@ -207,7 +199,7 @@ p {
 }
 
 .lucky-drawer button {
-  background-color: var(--roof-gradient);
+  background-color: var(--blue-dark);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -218,30 +210,43 @@ p {
 }
 
 .lucky-drawer button:hover {
-  background-color: var(--turquoise-dark);
+  background-color: var(--blue-light);
 }
 
 .winner {
   margin-top: 20px;
   font-size: 1.5rem;
-  color: var(--turquoise-dark);
+  color: var(--blue-dark);
 }
 
 /* ------------------------------- Footer --------------------------------*/
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--turquoise-dark);
+  background-color: var(--blue-dark);
   color: white;
   margin-top: 40px;
 }
 
 /* ------------------------------- Responsive --------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .logo-banner-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .logo-banner-wrapper nav {
+    margin-left: 0;
+    margin-top: 10px;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
-    bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster-container img {
+    max-width: 100%;
   }
 
   .featured-card, .prize-card {
@@ -250,24 +255,26 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .logo-banner-wrapper .logo-banner {
+    width: 200px;
+    height: 200px;
+  }
+
   .logo-banner-wrapper nav a {
     font-size: 0.95rem;
+    padding: 5px 8px;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .featured-card, .prize-card {
     width: 90%;
   }
 }
-
-
-
-
 
