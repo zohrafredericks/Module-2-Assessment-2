@@ -1,6 +1,3 @@
-
-
-
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -16,56 +13,59 @@ body, html {
 
 /* ------------------------------- Variables --------------------------------*/
 :root {
-  --blue-dark: #0B3D91;
-  --blue-light: #4A90E2;
+  --turquoise-dark: #006666;           /* Dark turquoise from logo building */
+  --roof-gradient: linear-gradient(to right, #FF7F50, #FF4500); /* Roof gradient: orange to red */
+  --blue-light: #4A90E2;               /* Optional accent */
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Header with Top-Left Logo --------------------------------*/
-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* logo on left */
-  padding: 10px 20px;
-  background-color: var(--blue-light);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* ------------------------------- Full-Width Logo Header --------------------------------*/
+.logo-banner-wrapper {
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
-.logo-container {
-  flex-shrink: 0;
-}
-
-.logo-container img.logo {
-  width: 300px; /* fixed width */
-  height: 300px; /* fixed height */
+.logo-banner {
+  width: 300px;       /* Use your image size */
+  height: 300px;
+  display: block;
   object-fit: contain;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-.main-nav {
+.logo-banner-wrapper nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   display: flex;
-  gap: 20px;
-  margin-left: 20px; /* spacing between logo and nav */
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
 }
 
-.main-nav a {
-  color: white;
-  text-decoration: none;
+.logo-banner-wrapper nav a {
+  color: var(--turquoise-dark);
   font-weight: 600;
+  text-decoration: none;
   font-size: 1.1rem;
   padding: 5px 10px;
   transition: color 0.3s;
 }
 
-.main-nav a:hover {
-  color: var(--blue-dark);
+.logo-banner-wrapper nav a:hover {
+  background: var(--roof-gradient);
+  color: white;
+  border-radius: 6px;
+  padding: 5px 12px;
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
+  background: linear-gradient(to right, var(--turquoise-dark), #004C4C); /* subtle darker turquoise */
   color: white;
 }
 
@@ -82,7 +82,7 @@ header {
 .btn-hero {
   display: inline-block;
   margin-top: 20px;
-  background-color: var(--blue-dark);
+  background: var(--roof-gradient);
   color: white;
   padding: 12px 25px;
   font-size: 1rem;
@@ -93,7 +93,7 @@ header {
 }
 
 .btn-hero:hover {
-  background-color: var(--blue-light);
+  background-color: var(--turquoise-dark);
 }
 
 /* ------------------------------- Sale Poster Section --------------------------------*/
@@ -125,7 +125,7 @@ header {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--blue-dark);
+  color: var(--turquoise-dark);
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -136,12 +136,12 @@ header {
 }
 
 .back-button a:hover {
-  color: var(--blue-light);
+  color: var(--roof-gradient);
 }
 
 /* ------------------------------- Sections & Headings --------------------------------*/
 h2, h1 {
-  color: var(--blue-dark);
+  color: var(--turquoise-dark);
   text-align: center;
   margin: 40px 0 20px;
 }
@@ -191,7 +191,7 @@ p {
 }
 
 .featured-card h3, .prize-card h3 {
-  color: var(--blue-dark);
+  color: var(--turquoise-dark);
   margin-bottom: 5px;
 }
 
@@ -207,7 +207,7 @@ p {
 }
 
 .lucky-drawer button {
-  background-color: var(--blue-dark);
+  background-color: var(--roof-gradient);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -218,29 +218,30 @@ p {
 }
 
 .lucky-drawer button:hover {
-  background-color: var(--blue-light);
+  background-color: var(--turquoise-dark);
 }
 
 .winner {
   margin-top: 20px;
   font-size: 1.5rem;
-  color: var(--blue-dark);
+  color: var(--turquoise-dark);
 }
 
 /* ------------------------------- Footer --------------------------------*/
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--blue-dark);
+  background-color: var(--turquoise-dark);
   color: white;
   margin-top: 40px;
 }
 
 /* ------------------------------- Responsive --------------------------------*/
 @media (max-width: 768px) {
-  .main-nav {
+  .logo-banner-wrapper nav {
     flex-wrap: wrap;
     gap: 15px;
+    bottom: 10px;
   }
 
   .featured-card, .prize-card {
@@ -249,7 +250,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .main-nav a {
+  .logo-banner-wrapper nav a {
     font-size: 0.95rem;
   }
 
@@ -265,3 +266,8 @@ footer {
     width: 90%;
   }
 }
+
+
+
+
+
