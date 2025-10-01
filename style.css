@@ -27,18 +27,20 @@ body, html {
   position: relative;
   text-align: center;
   width: 100%;
+  padding: 10px 0;
 }
 
 .logo-banner {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: auto;
+  height: 80px;          /* fits nicely in the header */
   object-fit: contain;
+  display: block;
+  margin: 0 auto;        /* centers horizontally */
 }
 
 .logo-banner-wrapper nav {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;          /* slightly above bottom for spacing */
   width: 100%;
   display: flex;
   justify-content: center;
