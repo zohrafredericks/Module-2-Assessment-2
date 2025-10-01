@@ -1,5 +1,8 @@
 
      
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,39 +20,56 @@
       --font-logo: 'Baloo 2', cursive;
     }
 
-    body, html {
+    /* ------------------------------- Global Reset --------------------------------*/
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
       font-family: var(--font-logo);
       background-color: #f2f6fb;
+      min-height: 100%;
     }
 
-    /* Header */
-    header {
+    /* ------------------------------- Header --------------------------------*/
+    .logo-banner-wrapper {
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+
+    .logo-banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .logo-banner-wrapper nav {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      background-color: var(--blue-light);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      justify-content: center;
+      gap: 25px;
     }
 
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      margin-left: 20px;
+    .logo-banner-wrapper nav a {
       color: white;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
+    .logo-banner-wrapper nav a:hover {
       color: var(--blue-dark);
     }
 
-    /* Hero Section */
+    /* ------------------------------- Hero Section --------------------------------*/
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -83,7 +103,7 @@
       background-color: var(--blue-light);
     }
 
-    /* Sale Poster Section */
+    /* ------------------------------- Sale Poster Section --------------------------------*/
     .sale-poster {
       text-align: center;
       padding: 50px 20px;
@@ -102,28 +122,54 @@
       transform: scale(1.02);
     }
 
-    /* Footer */
+    /* ------------------------------- Footer --------------------------------*/
     footer {
       text-align: center;
       padding: 20px;
       background-color: var(--blue-dark);
       color: white;
+      margin-top: 40px;
+    }
+
+    /* ------------------------------- Responsive --------------------------------*/
+    @media (max-width: 768px) {
+      .logo-banner-wrapper nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        bottom: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-banner-wrapper nav a {
+        font-size: 0.95rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header with full-width logo -->
   <header>
-    <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="map.html">Map</a>
-      <a href="shops.html">Shops</a>
-      <a href="shop-and-win.html">Shop & Win</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="logo-banner-wrapper">
+      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" class="logo-banner">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="shops.html">Shops</a>
+        <a href="shop-and-win.html">Shop & Win</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero Section -->
