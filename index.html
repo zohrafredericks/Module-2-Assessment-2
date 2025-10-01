@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,86 +29,78 @@
     }
 
     /* ------------------------------- Header --------------------------------*/
-    .logo-banner-wrapper {
-      position: relative;
-      text-align: center;
+    header {
       width: 100%;
+      position: relative;
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.25);
+      backdrop-filter: blur(5px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 1000;
     }
 
-    .logo-banner {
-      width: 100%;
+    .logo-container {
+      margin-bottom: 10px;
+    }
+
+    .logo-container img.logo {
+      width: 200px;
       height: auto;
-      display: block;
       object-fit: contain;
     }
 
-    .logo-banner-wrapper nav {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
+    .main-nav {
       display: flex;
-      justify-content: center;
       gap: 25px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
     }
 
-    .logo-banner-wrapper nav a {
+    .main-nav a {
       color: white;
-      font-weight: 600;
       text-decoration: none;
+      font-weight: 600;
       font-size: 1.1rem;
       padding: 5px 10px;
-      transition: color 0.3s;
+      transition: color 0.3s, background 0.3s;
     }
 
-    .logo-banner-wrapper nav a:hover {
+    .main-nav a:hover {
       color: var(--blue-dark);
-    }
-
-    /* ------------------------------- Back Button --------------------------------*/
-    .back-button {
-      margin: 20px;
-    }
-
-    .back-button a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--blue-dark);
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .back-button img {
-      width: 25px;
-      height: 25px;
-    }
-
-    .back-button a:hover {
-      color: var(--blue-light);
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 5px;
     }
 
     /* ------------------------------- Hero Section --------------------------------*/
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px; /* slightly shorter */
       background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
       color: white;
+      margin-top: 10px; /* spacing below header */
+      border-radius: 12px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.2rem;
-      margin-top: 10px;
+      margin-bottom: 20px;
       color: #e0f0ff;
     }
 
     .btn-hero {
       display: inline-block;
-      margin-top: 20px;
       background-color: var(--blue-dark);
       color: white;
       padding: 12px 25px;
@@ -117,6 +108,7 @@
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s;
+      cursor: pointer;
     }
 
     .btn-hero:hover {
@@ -128,13 +120,19 @@
       text-align: center;
       padding: 50px 20px;
       background-color: #f9fbff;
+      margin-top: 30px;
+    }
+
+    .poster-container {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     .poster-container img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
       transition: transform 0.3s;
     }
 
@@ -152,17 +150,36 @@
     }
 
     /* ------------------------------- Responsive --------------------------------*/
+    @media (max-width: 1024px) {
+      .logo-container img.logo {
+        width: 150px;
+      }
+      .poster-container {
+        max-width: 600px;
+      }
+    }
+
     @media (max-width: 768px) {
-      .logo-banner-wrapper nav {
-        flex-wrap: wrap;
+      header {
+        align-items: center;
+      }
+      .main-nav {
+        justify-content: center;
         gap: 15px;
-        bottom: 10px;
+      }
+      .poster-container {
+        max-width: 90%;
       }
     }
 
     @media (max-width: 480px) {
-      .logo-banner-wrapper nav a {
+      .logo-container img.logo {
+        width: 100px;
+      }
+
+      .main-nav a {
         font-size: 0.95rem;
+        padding: 3px 5px;
       }
 
       .hero h1 {
@@ -177,28 +194,20 @@
 </head>
 <body>
 
-  <!-- Header with full-width logo -->
+  <!-- Header -->
   <header>
-    <div class="logo-banner-wrapper">
-      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" class="logo-banner">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="map.html">Map</a>
-        <a href="shops.html">Shops</a>
-        <a href="shop-and-win.html">Shop & Win</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="logo-container">
+      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" class="logo">
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-
-  <!-- Back Button -->
-  <div class="back-button">
-    <a href="index.html">
-      <img src="images/backarrow.png" alt="Back">
-      Back to Home
-    </a>
-  </div>
 
   <!-- Hero Section -->
   <section class="hero">
