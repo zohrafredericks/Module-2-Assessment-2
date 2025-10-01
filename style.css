@@ -2,11 +2,6 @@
 
 
 
-
-
-
-
-
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -27,44 +22,40 @@ body, html {
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Header --------------------------------*/
-header {
+/* ------------------------------- Full-Width Logo Header --------------------------------*/
+.logo-banner-wrapper {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.logo-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.logo-banner-wrapper nav {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: var(--blue-light);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  justify-content: center;
+  gap: 25px;
 }
 
-header img {
-  height: 60px;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
+.logo-banner-wrapper nav a {
   color: white;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
-nav a:hover {
+.logo-banner-wrapper nav a:hover {
   color: var(--blue-dark);
-}
-
-.cart-icon img {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.cart-icon img:hover {
-  transform: scale(1.1);
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
@@ -95,6 +86,7 @@ nav a:hover {
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .btn-hero:hover {
@@ -243,14 +235,10 @@ footer {
 
 /* ------------------------------- Responsive --------------------------------*/
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    gap: 10px;
+  .logo-banner-wrapper nav {
     flex-wrap: wrap;
+    gap: 15px;
+    bottom: 10px;
   }
 
   .featured-card, .prize-card {
