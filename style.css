@@ -1,3 +1,5 @@
+
+
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -7,7 +9,7 @@
 
 body, html {
   font-family: 'Baloo 2', cursive;
-  background-color: #f2f6fb;
+  background: linear-gradient(to right, #00bfa5, #40e0d0); /* two-tone turquoise background for home page */
   min-height: 100%;
 }
 
@@ -18,28 +20,30 @@ body, html {
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Full-Width Logo Header (Top-Left) --------------------------------*/
-.logo-banner-wrapper {
+/* ------------------------------- Header with Top-Left Logo -------------------------------*/
+header {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
-  background-color: var(--blue-light);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  justify-content: flex-start; /* align items left */
+  padding: 15px 30px;
+  background: linear-gradient(to right, #00bfa5, #0B3D91); /* header gradient */
+  flex-wrap: wrap;
 }
 
-.logo-banner-wrapper .logo-banner {
-  width: 300px; /* fixed logo size */
+.logo-banner {
+  width: 300px; /* logo size */
   height: 300px;
   object-fit: contain;
 }
 
-.logo-banner-wrapper nav {
+header nav {
   display: flex;
-  gap: 25px;
-  margin-left: 20px; /* space between logo and nav */
+  gap: 20px;
+  margin-left: 40px; /* spacing between logo and nav */
+  flex-wrap: wrap;
 }
 
-.logo-banner-wrapper nav a {
+header nav a {
   color: white;
   font-weight: 600;
   text-decoration: none;
@@ -48,25 +52,23 @@ body, html {
   transition: color 0.3s;
 }
 
-.logo-banner-wrapper nav a:hover {
-  color: var(--blue-dark);
+header nav a:hover {
+  color: #0B3D91;
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
 .hero {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
+  padding: 80px 20px;
   color: white;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-top: 20px;
+  font-size: 3rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   color: #e0f0ff;
 }
@@ -91,12 +93,12 @@ body, html {
 /* ------------------------------- Sale Poster Section --------------------------------*/
 .sale-poster {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background-color: #f9fbff;
 }
 
 .poster-container img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -105,52 +107,6 @@ body, html {
 
 .poster-container img:hover {
   transform: scale(1.02);
-}
-
-/* ------------------------------- Back Button --------------------------------*/
-.back-button {
-  margin: 20px;
-}
-
-.back-button a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--blue-dark);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.back-button img {
-  width: 25px;
-  height: 25px;
-}
-
-.back-button a:hover {
-  color: var(--blue-light);
-}
-
-/* ------------------------------- Sections & Headings --------------------------------*/
-h2, h1 {
-  color: var(--blue-dark);
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  color: var(--blue-light);
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 /* ------------------------------- Featured / Cards --------------------------------*/
@@ -219,6 +175,30 @@ p {
   color: var(--blue-dark);
 }
 
+/* ------------------------------- Back Button --------------------------------*/
+.back-button {
+  margin: 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.back-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.back-button a:hover {
+  color: var(--blue-light);
+}
+
 /* ------------------------------- Footer --------------------------------*/
 footer {
   text-align: center;
@@ -228,25 +208,39 @@ footer {
   margin-top: 40px;
 }
 
+/* ------------------------------- Sections & Headings --------------------------------*/
+h2, h1 {
+  color: var(--blue-dark);
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--blue-light);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* ------------------------------- Responsive --------------------------------*/
 @media (max-width: 1024px) {
-  .logo-banner-wrapper {
+  header {
     flex-direction: column;
     align-items: center;
   }
 
-  .logo-banner-wrapper nav {
+  header nav {
     margin-left: 0;
     margin-top: 10px;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .poster-container img {
-    max-width: 100%;
   }
 
   .featured-card, .prize-card {
@@ -255,26 +249,29 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .logo-banner-wrapper .logo-banner {
+  .logo-banner {
     width: 200px;
     height: 200px;
   }
 
-  .logo-banner-wrapper nav a {
+  header nav a {
     font-size: 0.95rem;
     padding: 5px 8px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
   }
 
   .featured-card, .prize-card {
     width: 90%;
   }
-}
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
