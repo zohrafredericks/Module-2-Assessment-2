@@ -1,38 +1,21 @@
-\# Pine City Mall Website
 
 
 
-\## Overview
+Pine City Mall Website
+Overview
 
-This is a responsive website for \*\*Pine City Mall\*\*, showcasing the mall's features, promotions, navigation, and contact information. The homepage includes:  
+Pine City Mall Website is a fully responsive website designed to showcase the mall's features, promotions, navigation, and visitor information. It is optimized for desktop and mobile devices and provides a clean, user-friendly experience.
 
-\- Mall logo (`pine-logo.jpg`)  
+Features
 
-\- Hero section  
+Homepage: Highlights promotions, sale posters, and hero section.
 
-\- Sale poster (`sale-poster.jpg`)  
+Navigation: Easy access to all pages (Home, About, Contact, Map).
 
-\- Visitor information with `information-icon.png`  
+Visitor Information: Provides essential details with clear icons.
 
-\- Map navigation using `map-icon.png`  
+Map Navigation: Layout to help find stores, cinema, and facilities.
 
-\- Contact navigation using `contact-icon.png`  
+Contact Page: Quick access to contact details and forms.
 
-\- Footer  
-
-
-
-The website uses \*\*Baloo 2 font\*\*, a \*\*blue color palette\*\*, and clean, mobile-friendly layout.
-
-
-
----
-
-
-
-\## Folder Structure
-
-
-
-
-
+Consistent Design: Uses a modern, readable font, a blue color palette, and responsive layouts.
