@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pine City Mall</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue-dark: #0B3D91;   /* Dark blue from logo */
+      --blue-light: #4A90E2;  /* Light blue from logo */
+      --font-logo: 'Baloo 2', cursive;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-logo);
+      background-color: #f2f6fb;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: var(--blue-light);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--blue-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('images/hero-bg.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--blue-dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: var(--blue-light);
+    }
+
+    .btn-hero {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: var(--blue-dark);
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn-hero:hover {
+      background-color: var(--blue-light);
+    }
+
+    /* Sale Poster Section */
+    .sale-poster {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f9fbff;
+    }
+
+    .poster-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .poster-container img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--blue-dark);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/pine-logo.jpg" alt="Pine City Mall Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Pine City Mall</h1>
+    <p>Your destination for shopping, dining, and entertainment!</p>
+    <a href="shops.html" class="btn-hero">Explore Shops</a>
+  </section>
+
+  <!-- Sale Poster Section -->
+  <section class="sale-poster">
+    <div class="poster-container">
+      <img src="images/sale-poster.jpg" alt="Sale Poster">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
+
+</body>
+</html>

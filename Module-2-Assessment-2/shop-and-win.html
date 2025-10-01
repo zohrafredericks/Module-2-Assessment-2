@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop & Win - Pine City Mall</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue-dark: #0B3D91;
+      --blue-light: #4A90E2;
+      --font-logo: 'Baloo 2', cursive;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-logo);
+      background-color: #f2f6fb;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: var(--blue-light);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--blue-dark);
+    }
+
+    /* Shopping Cart Icon */
+    .cart-icon {
+      position: absolute;
+      right: 20px;
+    }
+
+    .cart-icon img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .cart-icon img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Back Button */
+    .back-button {
+      margin: 20px;
+    }
+
+    .back-button a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--blue-dark);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .back-button img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .back-button a:hover {
+      color: var(--blue-light);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      text-align: center;
+      background-color: #f2f6fb;
+      padding: 20px;
+    }
+
+    .hero-banner .hero-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Lucky Drawer */
+    .lucky-drawer {
+      text-align: center;
+      margin: 30px 20px;
+    }
+
+    .lucky-drawer button {
+      background-color: var(--blue-dark);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .lucky-drawer button:hover {
+      background-color: var(--blue-light);
+    }
+
+    .winner {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: var(--blue-dark);
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e8f0ff;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: var(--blue-light);
+    }
+
+    /* Promotion Section */
+    .promotion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .promotion h2 {
+      font-size: 2rem;
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+
+    .prize-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .prize-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 200px;
+      transition: transform 0.3s;
+    }
+
+    .prize-card:hover {
+      transform: scale(1.05);
+    }
+
+    .prize-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .prize-card h3 {
+      font-size: 1.2rem;
+      color: var(--blue-dark);
+      margin-bottom: 5px;
+    }
+
+    .prize-card p {
+      font-size: 1rem;
+      color: var(--blue-light);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--blue-dark);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="images/pine-logo.jpg" alt="Pine City Mall Logo">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="cart-icon">
+      <img src="images/shopping-cart-icon.png" alt="Shopping Cart">
+    </div>
+  </header>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">
+      <img src="images/back-arrow.png" alt="Back to Home">
+      Back to Home
+    </a>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <img src="images/shop-and-win.jpg" alt="Shop & Win Banner" class="hero-img">
+  </section>
+
+  <!-- Lucky Drawer Section -->
+  <section class="lucky-drawer">
+    <button onclick="drawPrize()">Try Your Luck!</button>
+    <div class="winner" id="winnerText"></div>
+  </section>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Shop & Win!</h1>
+    <p>Every purchase could make you our lucky winner! Discover amazing prizes.</p>
+  </section>
+
+  <!-- Promotion Section -->
+  <section class="promotion">
+    <h2>Featured Prizes</h2>
+    <div class="prize-container">
+      <!-- Prize 1 -->
+      <div class="prize-card">
+        <img src="images/prize1.jpg" alt="Prize 1">
+        <h3>Gift Voucher</h3>
+        <p>Win an R2000 shopping voucher to use at any store.</p>
+      </div>
+
+      <!-- Prize 2 -->
+      <div class="prize-card">
+        <img src="images/prize2.jpg" alt="Prize 2">
+        <h3>Smartwatch</h3>
+        <p>Stay connected and stylish with this latest smartwatch.</p>
+      </div>
+
+      <!-- Prize 3 -->
+      <div class="prize-card">
+        <img src="images/prize3.jpg" alt="Prize 3">
+        <h3>Dining Experience</h3>
+        <p>Enjoy a gourmet dinner for two at Pine City Mall restaurants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Lucky Drawer -->
+  <script>
+    const prizes = [
+      "Gift Voucher - R2000 Shopping Voucher!",
+      "Smartwatch - Stay connected and stylish!",
+      "Dining Experience - Gourmet dinner for two!",
+      "Extra Shopping Discount - 20% Off!",
+      "Free Movie Tickets - Enjoy the cinema!"
+    ];
+
+    function drawPrize() {
+      const randomIndex = Math.floor(Math.random() * prizes.length);
+      const prize = prizes[randomIndex];
+      document.getElementById("winnerText").textContent = `Congratulations! You won: ${prize}`;
+    }
+  </script>
+
+</body>
+</html>

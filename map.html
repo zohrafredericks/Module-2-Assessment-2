@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mall Map - Pine City</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .map-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+      position: relative;
+    }
+    .map-container img {
+      width: 100%;
+      border: 3px solid #333;
+      border-radius: 10px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #222;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 10px auto 20px auto;
+      line-height: 1.6;
+    }
+
+    /* Marker styles */
+    .marker {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s;
+    }
+    .marker:hover {
+      transform: scale(1.2) translate(-50%, -50%);
+    }
+
+    /* Example positions (adjust these for your map.jpg) */
+    .cinema { top: 30%; left: 70%; }
+    .bathrooms { top: 50%; left: 20%; }
+    .foodcourt { top: 65%; left: 60%; }
+
+    .back-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+    .back-btn img {
+      width: 50px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .back-btn img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Map Heading & Description -->
+  <div class="map-container">
+    <h1>Mall Map</h1>
+    <p>
+      Use this map to easily find your way around the mall.  
+      Click on the icons to explore locations like the cinema, bathrooms, and food court.  
+    </p>
+
+    <!-- Map Image -->
+    <img src="map.jpg" alt="Mall Map">
+
+    <!-- Clickable Markers -->
+    <a href="movie-theatre.html" title="Cinema">
+      <img src="movies-icon.png" alt="Cinema" class="marker cinema">
+    </a>
+
+    <a href="contact.html" title="Bathrooms & Facilities">
+      <img src="information-icon.png" alt="Bathrooms" class="marker bathrooms">
+    </a>
+
+    <a href="shops.html" title="Food Court">
+      <img src="food-eatery.jpg" alt="Food Court" class="marker foodcourt">
+    </a>
+  </div>
+
+  <!-- Back button (fixed bottom-left) -->
+  <div class="back-btn">
+    <a href="index.html">
+      <img src="back-arrow.png" alt="Go Back">
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shops - Pine City Mall</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Master CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Shops Grid */
+    .shops-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .shop-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 220px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+
+    .shop-card:hover {
+      transform: scale(1.05);
+    }
+
+    .shop-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .shop-card h3 {
+      color: #0B3D91;
+      margin-bottom: 5px;
+    }
+
+    .shop-card p {
+      color: #4A90E2;
+      font-size: 0.95rem;
+    }
+
+    /* Back Button */
+    .back-button {
+      margin: 20px;
+    }
+
+    .back-button a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .back-button img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .back-button a:hover {
+      color: #4A90E2;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    .page-title h1 {
+      font-size: 2.5rem;
+      color: #0B3D91;
+    }
+
+    /* Header Icons */
+    .icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .icons img {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Search Bar */
+    .search-bar {
+      display: none;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      width: 60%;
+      max-width: 400px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #4A90E2;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .search-bar input:focus {
+      border-color: #0B3D91;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .shop-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shop-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/pine-logo.jpg" alt="Pine City Mall Logo">
+      </a>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="icons">
+      <a href="#"><img src="images/search-icon.png" alt="Search"></a>
+      <a href="#"><img src="images/shopping-cart-icon.png" alt="Shopping Cart"></a>
+    </div>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar" id="search-bar">
+    <input type="text" id="shop-search" placeholder="Search shops...">
+  </div>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">
+      <img src="images/back-arrow.png" alt="Back to Home">
+      Back to Home
+    </a>
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Our Shops</h1>
+    <p>Explore the variety of stores at Pine City Mall</p>
+  </div>
+
+  <!-- Shops Grid -->
+  <div class="shops-container">
+    <!-- Shop 1 -->
+    <div class="shop-card">
+      <img src="images/classic-shoes.jpg" alt="Classic Shoes">
+      <h3>Classic Shoes</h3>
+      <p>Stylish footwear for the entire family.</p>
+    </div>
+
+    <!-- Shop 2 -->
+    <div class="shop-card">
+      <img src="images/fashion-for-all.jpg" alt="Fashion for All">
+      <h3>Fashion for All</h3>
+      <p>Trendy clothing and accessories for men and women.</p>
+    </div>
+
+    <!-- Shop 3 -->
+    <div class="shop-card">
+      <img src="images/tech-world.jpg" alt="Tech World">
+      <h3>Tech World</h3>
+      <p>Latest gadgets, electronics, and smart devices.</p>
+    </div>
+
+    <!-- Shop 4 -->
+    <div class="shop-card">
+      <img src="images/fresh-mart.jpg" alt="Many Things Market">
+      <h3>Many Things Market</h3>
+      <p>Fresh groceries, snacks, and beverages for every taste.</p>
+    </div>
+
+    <!-- Shop 5 -->
+    <div class="shop-card">
+      <img src="images/sweet-pastry-parlor.jpg" alt="Sweet Pastry Parlor">
+      <h3>Sweet Pastry Parlor</h3>
+      <p>Delicious baked treats and desserts for all ages.</p>
+    </div>
+
+    <!-- Shop 6 -->
+    <div class="shop-card">
+      <img src="images/gigis-salon.jpg" alt="Gigi's Hair & Nail Salon">
+      <h3>Gigi's Hair & Nail Salon</h3>
+      <p>Professional haircuts, styling, and beauty treatments.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Search -->
+  <script>
+    // Toggle search bar when search icon is clicked
+    const searchIcon = document.querySelector('.icons a:first-child');
+    const searchBar = document.getElementById('search-bar');
+    const shopInput = document.getElementById('shop-search');
+    const shopCards = document.querySelectorAll('.shop-card');
+
+    searchIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+      shopInput.focus();
+    });
+
+    // Filter shops as user types
+    shopInput.addEventListener('keyup', () => {
+      const filter = shopInput.value.toLowerCase();
+      shopCards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        if(name.includes(filter)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

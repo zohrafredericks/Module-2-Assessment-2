@@ -1,0 +1,224 @@
+/* ------------------------------- Global Reset --------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Baloo 2', cursive;
+  background-color: #f2f6fb;
+  min-height: 100%;
+}
+
+/* ------------------------------- Variables --------------------------------*/
+:root {
+  --blue-dark: #0B3D91;
+  --blue-light: #4A90E2;
+  --font-logo: 'Baloo 2', cursive;
+}
+
+/* ------------------------------- Header --------------------------------*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--blue-light);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--blue-dark);
+}
+
+.cart-icon img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cart-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------- Hero Banner --------------------------------*/
+.hero-banner {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------- Back Button --------------------------------*/
+.back-button {
+  margin: 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.back-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.back-button a:hover {
+  color: var(--blue-light);
+}
+
+/* ------------------------------- Sections & Headings --------------------------------*/
+h2, h1 {
+  color: var(--blue-dark);
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--blue-light);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------- Featured / Cards --------------------------------*/
+.featured, .prize-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.featured-card, .prize-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.featured-card:hover, .prize-card:hover {
+  transform: scale(1.05);
+}
+
+.featured-card img, .prize-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.featured-card h3, .prize-card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 5px;
+}
+
+.featured-card p, .prize-card p {
+  color: var(--blue-light);
+  font-size: 0.95rem;
+}
+
+/* ------------------------------- Lucky Drawer --------------------------------*/
+.lucky-drawer {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.lucky-drawer button {
+  background-color: var(--blue-dark);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lucky-drawer button:hover {
+  background-color: var(--blue-light);
+}
+
+.winner {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+}
+
+/* ------------------------------- Footer --------------------------------*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--blue-dark);
+  color: white;
+  margin-top: 40px;
+}
+
+/* ------------------------------- Responsive --------------------------------*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .featured-card, .prize-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-card, .prize-card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
