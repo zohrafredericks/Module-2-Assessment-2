@@ -1,8 +1,6 @@
 
 
 
-
-
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -23,59 +21,56 @@ body, html {
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Logo and Navigation ------------------------*/
-.logo-banner-wrapper {
-  position: relative;
-  width: 100%;
-  height: 320px; /* matches logo height plus padding */
-}
-
-.logo-banner {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-/* Sticky navigation */
-.logo-banner-wrapper nav {
-  position: sticky;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent */
-  width: 100%;
+/* ------------------------------- Header with Top-Left Logo --------------------------------*/
+header {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 10px 0;
-  z-index: 1000;
+  align-items: center;
+  justify-content: flex-start; /* logo on left */
+  padding: 10px 20px;
+  background-color: var(--blue-light);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.logo-banner-wrapper nav a {
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-container img.logo {
+  width: 300px; /* fixed width */
+  height: 300px; /* fixed height */
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px; /* spacing between logo and nav */
+  flex-wrap: wrap;
+}
+
+.main-nav a {
   color: white;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
   font-size: 1.1rem;
   padding: 5px 10px;
   transition: color 0.3s;
 }
 
-.logo-banner-wrapper nav a:hover {
+.main-nav a:hover {
   color: var(--blue-dark);
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
 .hero {
   text-align: center;
-  padding: 100px 20px 80px 20px; /* spacing for logo */
+  padding: 80px 20px;
   background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
   color: white;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
 }
 
 .hero p {
@@ -101,7 +96,7 @@ body, html {
   background-color: var(--blue-light);
 }
 
-/* ------------------------------- Sale Poster Section ------------------------*/
+/* ------------------------------- Sale Poster Section --------------------------------*/
 .sale-poster {
   text-align: center;
   padding: 50px 20px;
@@ -120,7 +115,119 @@ body, html {
   transform: scale(1.02);
 }
 
-/* ------------------------------- Footer --------------------------------------*/
+/* ------------------------------- Back Button --------------------------------*/
+.back-button {
+  margin: 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.back-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.back-button a:hover {
+  color: var(--blue-light);
+}
+
+/* ------------------------------- Sections & Headings --------------------------------*/
+h2, h1 {
+  color: var(--blue-dark);
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--blue-light);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------- Featured / Cards --------------------------------*/
+.featured, .prize-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.featured-card, .prize-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.featured-card:hover, .prize-card:hover {
+  transform: scale(1.05);
+}
+
+.featured-card img, .prize-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.featured-card h3, .prize-card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 5px;
+}
+
+.featured-card p, .prize-card p {
+  color: var(--blue-light);
+  font-size: 0.95rem;
+}
+
+/* ------------------------------- Lucky Drawer --------------------------------*/
+.lucky-drawer {
+  text-align: center;
+  margin: 30px 20px;
+}
+
+.lucky-drawer button {
+  background-color: var(--blue-dark);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lucky-drawer button:hover {
+  background-color: var(--blue-light);
+}
+
+.winner {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+}
+
+/* ------------------------------- Footer --------------------------------*/
 footer {
   text-align: center;
   padding: 20px;
@@ -129,57 +236,21 @@ footer {
   margin-top: 40px;
 }
 
-/* ------------------------------- Responsive ----------------------------------*/
+/* ------------------------------- Responsive --------------------------------*/
 @media (max-width: 768px) {
-  .logo-banner-wrapper {
-    height: 200px;
-  }
-
-  .logo-banner {
-    width: 150px;
-    height: 150px;
-  }
-
-  .logo-banner-wrapper nav {
+  .main-nav {
     flex-wrap: wrap;
     gap: 15px;
-    padding: 5px 0;
   }
 
-  .hero {
-    padding-top: 180px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
+  .featured-card, .prize-card {
+    width: 45%;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-banner-wrapper {
-    height: 120px;
-  }
-
-  .logo-banner {
-    width: 100px;
-    height: 100px;
-  }
-
-  .logo-banner-wrapper nav {
-    gap: 10px;
-  }
-
-  .logo-banner-wrapper nav a {
-    font-size: 0.9rem;
-    padding: 3px 5px;
-  }
-
-  .hero {
-    padding-top: 140px;
+  .main-nav a {
+    font-size: 0.95rem;
   }
 
   .hero h1 {
@@ -188,5 +259,9 @@ footer {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .featured-card, .prize-card {
+    width: 90%;
   }
 }
