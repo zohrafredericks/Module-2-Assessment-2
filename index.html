@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,205 +11,24 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --blue-dark: #0B3D91;
-      --blue-light: #4A90E2;
-      --font-logo: 'Baloo 2', cursive;
-    }
-
-    /* ------------------------------- Global Reset --------------------------------*/
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      font-family: var(--font-logo);
-      background-color: #f2f6fb;
-      min-height: 100%;
-    }
-
-    /* ------------------------------- Header --------------------------------*/
-    header {
-      width: 100%;
-      position: relative;
-      padding: 10px 20px;
-      background-color: rgba(0,0,0,0.25);
-      backdrop-filter: blur(5px);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      z-index: 1000;
-    }
-
-    .logo-container {
-      margin-bottom: 10px;
-    }
-
-    .logo-container img.logo {
-      width: 200px;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .main-nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      width: 100%;
-    }
-
-    .main-nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 5px 10px;
-      transition: color 0.3s, background 0.3s;
-    }
-
-    .main-nav a:hover {
-      color: var(--blue-dark);
-      background-color: rgba(255,255,255,0.2);
-      border-radius: 5px;
-    }
-
-    /* ------------------------------- Hero Section --------------------------------*/
-    .hero {
-      text-align: center;
-      padding: 60px 20px; /* slightly shorter */
-      background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
-      color: white;
-      margin-top: 10px; /* spacing below header */
-      border-radius: 12px;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #e0f0ff;
-    }
-
-    .btn-hero {
-      display: inline-block;
-      background-color: var(--blue-dark);
-      color: white;
-      padding: 12px 25px;
-      font-size: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      cursor: pointer;
-    }
-
-    .btn-hero:hover {
-      background-color: var(--blue-light);
-    }
-
-    /* ------------------------------- Sale Poster Section --------------------------------*/
-    .sale-poster {
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #f9fbff;
-      margin-top: 30px;
-    }
-
-    .poster-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .poster-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: transform 0.3s;
-    }
-
-    .poster-container img:hover {
-      transform: scale(1.02);
-    }
-
-    /* ------------------------------- Footer --------------------------------*/
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--blue-dark);
-      color: white;
-      margin-top: 40px;
-    }
-
-    /* ------------------------------- Responsive --------------------------------*/
-    @media (max-width: 1024px) {
-      .logo-container img.logo {
-        width: 150px;
-      }
-      .poster-container {
-        max-width: 600px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        align-items: center;
-      }
-      .main-nav {
-        justify-content: center;
-        gap: 15px;
-      }
-      .poster-container {
-        max-width: 90%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo-container img.logo {
-        width: 100px;
-      }
-
-      .main-nav a {
-        font-size: 0.95rem;
-        padding: 3px 5px;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header with top-left logo -->
   <header>
-    <div class="logo-container">
-      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" class="logo">
+    <div class="logo-banner-wrapper">
+      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" class="logo-banner">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="shops.html">Shops</a>
+        <a href="shop-and-win.html">Shop & Win</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="map.html">Map</a>
-      <a href="shops.html">Shops</a>
-      <a href="shop-and-win.html">Shop & Win</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -223,10 +45,62 @@
     </div>
   </section>
 
+  <!-- Featured Shops Section -->
+  <section class="featured">
+    <h2>Featured Stores</h2>
+    <div class="featured-card">
+      <img src="images/classicshoe.jpg" alt="Classic Shoes">
+      <h3>Classic Shoes</h3>
+      <p>Step into style with our timeless collection.</p>
+    </div>
+    <div class="featured-card">
+      <img src="images/fashion-for-all.jpg" alt="Fashion For All">
+      <h3>Fashion For All</h3>
+      <p>Trendy outfits for every age and occasion.</p>
+    </div>
+    <div class="featured-card">
+      <img src="images/techshopper.jpg" alt="Tech Shopper">
+      <h3>Tech Shopper</h3>
+      <p>Latest gadgets and electronics at unbeatable prices.</p>
+    </div>
+    <div class="featured-card">
+      <img src="images/freshmart.jpg" alt="Fresh Mart">
+      <h3>Fresh Mart</h3>
+      <p>Daily groceries and fresh produce for your family.</p>
+    </div>
+  </section>
+
+  <!-- Lucky Drawer Section -->
+  <section class="lucky-drawer">
+    <h2>Try Your Luck!</h2>
+    <p>Click the button below for a chance to win exciting prizes:</p>
+    <button id="drawBtn">Draw Now</button>
+    <div class="winner" id="winnerText"></div>
+  </section>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 Pine City Mall. All rights reserved.
   </footer>
 
+  <!-- Lucky Drawer Script -->
+  <script>
+    const prizes = [
+      "Free Movie Tickets",
+      "Discount Voucher",
+      "Gift Hamper",
+      "Free Coffee",
+      "Shopping Voucher"
+    ];
+
+    const drawBtn = document.getElementById('drawBtn');
+    const winnerText = document.getElementById('winnerText');
+
+    drawBtn.addEventListener('click', () => {
+      const winner = prizes[Math.floor(Math.random() * prizes.length)];
+      winnerText.textContent = `Congratulations! You won: ${winner}`;
+    });
+  </script>
+  
 </body>
 </html>
