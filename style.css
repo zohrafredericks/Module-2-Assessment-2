@@ -1,7 +1,6 @@
 
 
 
- 
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -11,7 +10,7 @@
 
 body, html {
   font-family: 'Baloo 2', cursive;
-  background-color: #f2f6fb;
+  background: linear-gradient(to right, #00bfa5, #40e0d0); /* two-tone turquoise for homepage */
   min-height: 100%;
 }
 
@@ -19,46 +18,49 @@ body, html {
 :root {
   --blue-dark: #0B3D91;
   --blue-light: #4A90E2;
-  --turquoise-light: #40E0D0;
-  --turquoise-dark: #008080;
   --font-logo: 'Baloo 2', cursive;
 }
 
-/* ------------------------------- Header --------------------------------*/
+/* ------------------------------- Header with Top-Left Logo -------------------------------*/
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background: linear-gradient(to right, var(--turquoise-light), var(--turquoise-dark));
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  justify-content: flex-start;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #00bfa5, #40e0d0); /* turquoise gradient */
+  flex-wrap: wrap;
 }
 
-header img {
-  height: 80px;
-  width: auto;
+.logo-banner {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
 
-nav {
+header nav {
   display: flex;
   gap: 20px;
+  margin-left: 40px;
+  flex-wrap: wrap;
 }
 
-nav a {
+header nav a {
   color: white;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--blue-dark);
+header nav a:hover {
+  color: #0B3D91; /* darker turquoise on hover */
 }
 
 /* ------------------------------- Hero Section --------------------------------*/
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(to right, var(--blue-light), var(--blue-dark));
   color: white;
 }
 
@@ -106,52 +108,6 @@ nav a:hover {
 
 .poster-container img:hover {
   transform: scale(1.02);
-}
-
-/* ------------------------------- Back Button --------------------------------*/
-.back-button {
-  margin: 20px;
-}
-
-.back-button a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--blue-dark);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.back-button img {
-  width: 25px;
-  height: 25px;
-}
-
-.back-button a:hover {
-  color: var(--blue-light);
-}
-
-/* ------------------------------- Sections & Headings --------------------------------*/
-h2, h1 {
-  color: var(--blue-dark);
-  text-align: center;
-  margin: 40px 0 20px;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  color: var(--blue-light);
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 /* ------------------------------- Featured / Cards --------------------------------*/
@@ -220,25 +176,72 @@ p {
   color: var(--blue-dark);
 }
 
+/* ------------------------------- Back Button --------------------------------*/
+.back-button {
+  margin: 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.back-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.back-button a:hover {
+  color: var(--blue-light);
+}
+
 /* ------------------------------- Footer --------------------------------*/
 footer {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(to right, var(--turquoise-light), var(--turquoise-dark));
+  background-color: var(--blue-dark);
   color: white;
   margin-top: 40px;
 }
 
+/* ------------------------------- Sections & Headings --------------------------------*/
+h2, h1 {
+  color: var(--blue-dark);
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--blue-light);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* ------------------------------- Responsive --------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  nav {
-    gap: 10px;
-    flex-wrap: wrap;
+  header nav {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
   }
 
   .featured-card, .prize-card {
@@ -247,6 +250,16 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .logo-banner {
+    width: 200px;
+    height: 200px;
+  }
+
+  header nav a {
+    font-size: 0.95rem;
+    padding: 5px 8px;
+  }
+
   .featured-card, .prize-card {
     width: 90%;
   }
@@ -257,5 +270,9 @@ footer {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
