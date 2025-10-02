@@ -107,20 +107,6 @@ header nav a:hover {
   max-width: 1200px;
 }
 
-.poster-container img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 12px;
-  border: 3px solid #ffffff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.poster-container img:hover {
-  transform: scale(1.03);
-}
-
 /* ------------------------------- Featured / Cards --------------------------------*/
 .featured, .prize-container {
   display: flex;
@@ -145,12 +131,23 @@ header nav a:hover {
   transform: scale(1.05);
 }
 
-/* --- Unified Featured and Store Page Images --- */
+.featured-card h3, .prize-card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 5px;
+}
+
+.featured-card p, .prize-card p {
+  color: var(--blue-light);
+  font-size: 0.95rem;
+}
+
+/* ------------------------------- Unified Image Styling --------------------------------*/
 .featured-card img,
 .prize-card img,
-.store-images img {
+.store-images img,
+.poster-container img {
   width: 100%;
-  max-width: 300px; /* all images same size */
+  max-width: 300px;
   height: auto;
   border-radius: 12px;
   border: 3px solid #ffffff;
@@ -161,18 +158,9 @@ header nav a:hover {
 
 .featured-card img:hover,
 .prize-card img:hover,
-.store-images img:hover {
+.store-images img:hover,
+.poster-container img:hover {
   transform: scale(1.03);
-}
-
-.featured-card h3, .prize-card h3 {
-  color: var(--blue-dark);
-  margin-bottom: 5px;
-}
-
-.featured-card p, .prize-card p {
-  color: var(--blue-light);
-  font-size: 0.95rem;
 }
 
 /* ------------------------------- Lucky Drawer --------------------------------*/
@@ -332,4 +320,5 @@ p {
 }
 
 
+ 
 
