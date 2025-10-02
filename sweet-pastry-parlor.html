@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Pastry Parlor - Pine City Mall</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(to right, #ffb6c1, #ffe4e1); /* candy-floss strawberry gradient */
+      min-height: 100%;
+      color: #d62828;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Store Logo - Fun Candy Floss Style */
+    .store-logo h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff69b4; /* playful pink */
+      text-shadow: 1px 1px 3px rgba(255,182,193,0.5);
+    }
+
+    .store-info {
+      margin: 30px auto;
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #8b0000; /* darker red for readability */
+      background-color: rgba(255, 240, 245, 0.7);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .store-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .store-images img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .store-images img:hover {
+      transform: scale(1.03);
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    a.back:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="store-logo">
+    <h1>Sweet Pastry Parlor</h1>
+  </div>
+
+  <div class="store-info">
+    <p>Sweet Pastry Parlor offers delicious pastries, cakes, and treats that taste as delightful as they look! Perfect for a sweet indulgence or a gift for someone special.</p>
+  </div>
+
+  <div class="store-images">
+    <img src="images/bakeryshop.jpg" alt="Bakery Shop">
+    <img src="images/foodeatery.jpg" alt="Food Eatery">
+  </div>
+
+  <a href="shops.html" class="back">← Back to Shops</a>
+
+</body>
+</html>
