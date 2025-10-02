@@ -40,9 +40,9 @@
     }
 
     .store-images img {
-      width: 100%;         /* fills container without stretching */
-      max-width: 500px;    /* allows larger display on laptops */
-      height: auto;        /* preserves aspect ratio */
+      width: auto;        /* avoids stretching */
+      max-width: 300px;   /* matches home page cards */
+      height: auto;       /* preserves aspect ratio */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s;
@@ -84,12 +84,6 @@
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      .store-images img {
-        max-width: 450px;
-      }
-    }
-
     @media (max-width: 768px) {
       .store-images img {
         max-width: 90%;
@@ -147,6 +141,5 @@
 </body>
 </html>
 
-
-
+ 
 
