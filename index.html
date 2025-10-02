@@ -13,22 +13,138 @@
 
   <style>
     /* Featured Stores Images */
-    .featured-card img {
-      width: auto;
-      max-width: 300px;  /* same as store pages */
-      height: auto;
+    .featured-card {
+      text-align: center;
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      margin: 15px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
 
-    .featured-card img:hover {
+    .featured-card:hover {
       transform: scale(1.03);
     }
 
-    /* Responsive for mobile */
+    .featured-card img {
+      width: auto;
+      max-width: 300px;   /* keeps ratio same as store pages */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .featured-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .featured-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.4rem;
+      color: var(--blue-dark);
+    }
+
+    .featured-card p {
+      font-size: 1rem;
+      color: var(--blue-light);
+    }
+
+    /* Sale Poster Section */
+    .poster-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .poster-container img {
+      max-width: 300px;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(74,144,226,0.1);
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--blue-dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--blue-light);
+      margin: 15px 0;
+    }
+
+    .btn-hero {
+      display: inline-block;
+      background-color: var(--blue-dark);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn-hero:hover {
+      background-color: var(--blue-light);
+    }
+
+    /* Lucky Drawer Section */
+    .lucky-drawer {
+      text-align: center;
+      margin: 50px 20px;
+      padding: 20px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .lucky-drawer button {
+      background-color: var(--blue-dark);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .lucky-drawer button:hover {
+      background-color: var(--blue-light);
+    }
+
+    .winner {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--blue-dark);
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .featured-card img {
+        max-width: 90%;
+      }
+
+      .poster-container img {
         max-width: 90%;
       }
     }
@@ -68,15 +184,13 @@
   <!-- Featured Shops Section -->
   <section class="featured">
     <h2>Featured Stores</h2>
-
     <div class="featured-card">
       <a href="classic-shoes.html">
-        <img src="images/classicshoe1.jpg" alt="Classic Shoes">
+        <img src="images/highheels.jpg" alt="Classic Shoes">
         <h3>Classic Shoes</h3>
         <p>Step into style with our timeless collection.</p>
       </a>
     </div>
-
     <div class="featured-card">
       <a href="fashion-for-all.html">
         <img src="images/clothingshop.jpg" alt="Fashion For All">
@@ -84,7 +198,6 @@
         <p>High-quality clothing for every age and occasion.</p>
       </a>
     </div>
-
     <div class="featured-card">
       <a href="tech-world.html">
         <img src="images/techshopper.jpg" alt="Tech Shopper">
@@ -92,7 +205,6 @@
         <p>Latest gadgets and electronics under one roof.</p>
       </a>
     </div>
-
     <div class="featured-card">
       <a href="many-things.html">
         <img src="images/retailtherapy.jpg" alt="Many Things Store">
@@ -100,7 +212,6 @@
         <p>Everything you need in one convenient shop.</p>
       </a>
     </div>
-
     <div class="featured-card">
       <a href="sweet-pastry-parlor.html">
         <img src="images/bakeryshop.jpg" alt="Sweet Pastry Parlor">
@@ -108,7 +219,6 @@
         <p>A candy-floss, strawberry-sweet experience for dessert lovers.</p>
       </a>
     </div>
-
     <div class="featured-card">
       <a href="gigis-hair-nails.html">
         <img src="images/hairsalon.jpg" alt="Gigi's Hair & Nails Salon">
@@ -116,7 +226,6 @@
         <p>Relaxing salon experience with soft, calming vibes.</p>
       </a>
     </div>
-
   </section>
 
   <!-- Lucky Drawer Section -->
@@ -141,15 +250,17 @@
       "Free Coffee",
       "Shopping Voucher"
     ];
-
     const drawBtn = document.getElementById('drawBtn');
     const winnerText = document.getElementById('winnerText');
-
     drawBtn.addEventListener('click', () => {
       const winner = prizes[Math.floor(Math.random() * prizes.length)];
-      winnerText.textContent = `Congratulations! You won: ${winner}`;
+      winnerText.textContent = `🎉 Congratulations! You won: ${winner}`;
     });
   </script>
 
 </body>
 </html>
+
+
+  
+
