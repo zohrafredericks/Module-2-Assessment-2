@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Many Things Store - Pine City Mall</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(to right, #00bfa5, #40e0d0);
+      min-height: 100%;
+      color: #0B3D91;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Store Logo - Walmart Style Colors */
+    .store-logo h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .store-logo span {
+      color: #FFCC00; /* Walmart-style yellow accent */
+    }
+
+    .store-info {
+      margin: 30px auto;
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #fff;
+      background-color: rgba(11, 61, 145, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .store-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .store-images img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .store-images img:hover {
+      transform: scale(1.03);
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #0B3D91;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    a.back:hover {
+      background-color: #4A90E2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="store-logo">
+    <h1>Many <span>Things</span> Store</h1>
+  </div>
+
+  <div class="store-info">
+    <p>Many Things Store is your one-stop shop for everything you need! From groceries to household essentials, we provide quality products for the whole family—just like Walmart.</p>
+  </div>
+
+  <div class="store-images">
+    <img src="images/retailtherapy.jpg" alt="Retail Therapy">
+    <img src="images/grocerystore.jpg" alt="Grocery Store">
+  </div>
+
+  <a href="shops.html" class="back">← Back to Shops</a>
+
+</body>
+</html>
