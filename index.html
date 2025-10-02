@@ -10,6 +10,29 @@
 
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Featured Stores Images */
+    .featured-card img {
+      width: auto;
+      max-width: 300px;  /* same as store pages */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .featured-card img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      .featured-card img {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -130,5 +153,3 @@
 
 </body>
 </html>
-
-
