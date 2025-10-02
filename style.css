@@ -211,6 +211,8 @@ header nav a:hover {
 /* ------------------------------- Back Button --------------------------------*/
 .back-button {
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .back-button a {
@@ -221,6 +223,10 @@ header nav a:hover {
   color: var(--blue-dark);
   font-weight: 600;
   font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid var(--blue-dark);
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .back-button img {
@@ -229,7 +235,8 @@ header nav a:hover {
 }
 
 .back-button a:hover {
-  color: var(--blue-light);
+  background-color: var(--blue-dark);
+  color: white;
 }
 
 /* ------------------------------- Footer --------------------------------*/
@@ -292,7 +299,7 @@ p {
 
 .store-images img {
   width: 100%;
-  max-width: 350px; /* ensures crisp images on larger screens */
+  max-width: 500px; /* sharp on desktop, responsive on mobile */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -355,9 +362,3 @@ p {
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
