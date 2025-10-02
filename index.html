@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Link to CSS -->
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,55 +29,103 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to Pine City Mall</h1>
-    <p>Your one-stop destination for shopping, fun, and family entertainment!</p>
+    <p>Your destination for shopping, dining, and entertainment!</p>
     <a href="shops.html" class="btn-hero">Explore Shops</a>
   </section>
 
-  <!-- Sale Posters -->
+  <!-- Sale Poster Section -->
   <section class="sale-poster">
     <div class="poster-container">
-      <img src="images/poster1.jpg" alt="Sale Poster 1">
-      <img src="images/poster2.jpg" alt="Sale Poster 2">
-      <img src="images/poster3.jpg" alt="Sale Poster 3">
+      <img src="images/saleposter1.jpg" alt="Mega Sale Poster">
+      <img src="images/familyshopping.jpg" alt="Family Shopping">
+      <img src="images/shopandwin.jpg" alt="Shop & Win">
     </div>
   </section>
 
-  <!-- Featured Shops -->
+  <!-- Featured Shops Section -->
   <section class="featured">
+    <h2>Featured Stores</h2>
+
     <div class="featured-card">
-      <img src="images/classicshoe.jpg" alt="Classic Shoes">
-      <h3>Classic Shoes</h3>
-      <p>Timeless footwear for every occasion.</p>
+      <a href="classic-shoes.html">
+        <img src="images/classicshoe.jpg" alt="Classic Shoes">
+        <h3>Classic Shoes</h3>
+        <p>Step into style with our timeless collection.</p>
+      </a>
     </div>
+
     <div class="featured-card">
-      <img src="images/clothingshop.jpg" alt="Fashion For All">
-      <h3>Fashion For All</h3>
-      <p>Trendy clothing for men, women, and kids.</p>
+      <a href="fashion-for-all.html">
+        <img src="images/clothingshop.jpg" alt="Fashion For All">
+        <h3>Fashion For All</h3>
+        <p>High-quality clothing for every age and occasion.</p>
+      </a>
     </div>
+
     <div class="featured-card">
-      <img src="images/techshop.jpg" alt="Tech World">
-      <h3>Tech World</h3>
-      <p>Latest gadgets and electronics.</p>
+      <a href="tech-world.html">
+        <img src="images/techshopper.jpg" alt="Tech Shopper">
+        <h3>Tech World</h3>
+        <p>Latest gadgets and electronics under one roof.</p>
+      </a>
     </div>
+
+    <div class="featured-card">
+      <a href="many-things.html">
+        <img src="images/retailtherapy.jpg" alt="Many Things Store">
+        <h3>Many Things Store</h3>
+        <p>Everything you need in one convenient shop.</p>
+      </a>
+    </div>
+
+    <div class="featured-card">
+      <a href="sweet-pastry-parlor.html">
+        <img src="images/bakeryshop.jpg" alt="Sweet Pastry Parlor">
+        <h3>Sweet Pastry Parlor</h3>
+        <p>A candy-floss, strawberry-sweet experience for dessert lovers.</p>
+      </a>
+    </div>
+
+    <div class="featured-card">
+      <a href="gigis-hair-nails.html">
+        <img src="images/hairsalon.jpg" alt="Gigi's Hair & Nails Salon">
+        <h3>Gigi’s Hair & Nails</h3>
+        <p>Relaxing salon experience with soft, calming vibes.</p>
+      </a>
+    </div>
+
   </section>
 
-  <!-- Lucky Drawer -->
-  <div class="lucky-drawer">
-    <button onclick="pickWinner()">Try Your Luck!</button>
-    <div class="winner" id="winner"></div>
-  </div>
+  <!-- Lucky Drawer Section -->
+  <section class="lucky-drawer">
+    <h2>Try Your Luck!</h2>
+    <p>Click the button below for a chance to win exciting prizes:</p>
+    <button id="drawBtn">Draw Now</button>
+    <div class="winner" id="winnerText"></div>
+  </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Pine City Mall. All rights reserved.
   </footer>
 
+  <!-- Lucky Drawer Script -->
   <script>
-    function pickWinner() {
-      const prizes = ["Gift Voucher", "Free Coffee", "Discount Coupon", "Mystery Gift"];
+    const prizes = [
+      "Free Movie Tickets",
+      "Discount Voucher",
+      "Gift Hamper",
+      "Free Coffee",
+      "Shopping Voucher"
+    ];
+
+    const drawBtn = document.getElementById('drawBtn');
+    const winnerText = document.getElementById('winnerText');
+
+    drawBtn.addEventListener('click', () => {
       const winner = prizes[Math.floor(Math.random() * prizes.length)];
-      document.getElementById("winner").textContent = `You won: ${winner}!`;
-    }
+      winnerText.textContent = `Congratulations! You won: ${winner}`;
+    });
   </script>
 
 </body>
