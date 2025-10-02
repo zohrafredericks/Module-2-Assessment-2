@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
 /* ------------------------------- Global Reset --------------------------------*/
 * {
   margin: 0;
@@ -121,12 +125,6 @@ header nav a:hover {
 
 .poster-container img:hover {
   transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  .poster-container img {
-    max-width: 90%;
-  }
 }
 
 /* ------------------------------- Featured / Cards --------------------------------*/
@@ -285,6 +283,13 @@ p {
 
   .featured-card, .prize-card {
     width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster-container img {
+    max-width: 90%;
+    margin-bottom: 20px; /* spacing between stacked posters on mobile */
   }
 }
 
