@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Shoes - Pine City Mall</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Store Logo */
+    .store-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Baloo 2', cursive;
+      font-size: 2rem;
+      color: #0B3D91; /* dark blue */
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .store-logo .logo-icon {
+      font-size: 2.5rem;
+    }
+
+    /* Store Info */
+    .store-info {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #0B3D91;
+    }
+
+    /* Store Images */
+    .store-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .store-images img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .store-images img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Back Button */
+    .back-button {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .back-button a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #0B3D91;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #0B3D91;
+      color: white;
+    }
+
+    .back-button img {
+      width: 25px;
+      height: 25px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .store-images img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Store Logo -->
+  <div class="store-logo">
+    <span class="logo-icon">👟</span>
+    <span class="logo-text">Classic Shoes</span>
+  </div>
+
+  <!-- Store Info -->
+  <div class="store-info">
+    <p>Welcome to Classic Shoes! Step into style with our wide selection of shoes, from casual everyday wear to elegant formal designs. Our friendly staff will help you find the perfect fit for every occasion. Quality, comfort, and style – all under one roof!</p>
+  </div>
+
+  <!-- Store Images -->
+  <div class="store-images">
+    <img src="images/kidsshoes.jpg" alt="Kids Shoes">
+    <img src="images/classicshoe.jpg" alt="Classic Shoes Collection">
+  </div>
+
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="shops.html">
+      <img src="images/back-arrow.png" alt="Back">
+      Back to Shops
+    </a>
+  </div>
+
+</body>
+</html>
