@@ -19,6 +19,26 @@
       color: #4b3f72; /* calm muted purple */
       text-align: center;
       padding: 20px;
+      position: relative;
+      padding-bottom: 100px; /* space for back button */
+    }
+
+    /* Header with top-right logo */
+    header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 30px;
+      position: relative;
+    }
+
+    header .logo {
+      margin-left: auto;
+    }
+
+    header .logo img {
+      width: 150px;
+      height: 150px;
     }
 
     /* Store Logo - Elegant & Relaxing */
@@ -27,13 +47,14 @@
       font-weight: 700;
       color: #9370db; /* soft lavender */
       text-shadow: 1px 1px 3px rgba(147,112,219,0.5);
+      margin: 30px 0;
     }
 
     .store-info {
-      margin: 30px auto;
+      margin: 0 auto 40px auto;
       max-width: 700px;
       font-size: 1.1rem;
-      color: #4b3f72; /* deeper accent color */
+      color: #4b3f72;
       background-color: rgba(255, 250, 250, 0.8);
       padding: 20px;
       border-radius: 12px;
@@ -61,39 +82,87 @@
       transform: scale(1.03);
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #9370db;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
+    /* Back Button Bottom Left */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
     }
 
-    a.back:hover {
+    .back-button a {
+      text-decoration: none;
+      color: #9370db;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #9370db;
+      border-radius: 8px;
+      background: #f0f0f0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
       background-color: #8a2be2;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #9370db;
+      color: #f0fff0;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .store-images img {
+        width: 90%;
+      }
+
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header with top-right logo -->
+  <header>
+    <div class="logo">
+      <img src="images/gigislogo.png" alt="Gigi's Hair & Nails Salon Logo">
+    </div>
+  </header>
+
+  <!-- Store Logo -->
   <div class="store-logo">
     <h1>Gigi's Hair & Nails Salon</h1>
   </div>
 
+  <!-- Store Info -->
   <div class="store-info">
     <p>Gigi's Hair & Nails Salon provides a serene and relaxing environment for haircuts, styling, and nail care. Treat yourself to a moment of relaxation and beauty.</p>
   </div>
 
+  <!-- Store Images -->
   <div class="store-images">
     <img src="images/hairsalon.jpg" alt="Hair Salon">
     <img src="images/nails.jpg" alt="Nail Care">
   </div>
 
-  <a href="shops.html" class="back">← Back to Shops</a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="shops.html">Back to Shops</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
