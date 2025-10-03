@@ -4,95 +4,200 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech World - Pine City Mall</title>
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
+
   <style>
-    body {
+    /* Tech Page Specific */
+    body.tech-page {
+      font-family: 'Baloo 2', sans-serif;
+      background: linear-gradient(to right, #CCE5FF, #99CCFF); /* soft blue gradient */
+      color: #003366; /* dark blue text */
+      position: relative;
+      padding-bottom: 100px; /* space for back button */
+    }
+
+    /* Header */
+    body.tech-page header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #004080; /* dark blue */
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    body.tech-page header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    body.tech-page header nav a {
+      color: #CCE5FF; /* light blue links */
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    body.tech-page header nav a:hover {
+      color: #99CCFF;
+    }
+
+    /* Logo top-right */
+    body.tech-page header .logo {
+      margin-left: auto; /* push logo to top-right */
+    }
+
+    body.tech-page header .logo img {
+      width: 150px;
+      height: 150px;
+    }
+
+    /* Store Logo Text */
+    .store-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
       font-family: 'Baloo 2', cursive;
-      background: linear-gradient(to right, #00bfa5, #40e0d0);
-      min-height: 100%;
-      color: #0B3D91;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .store-logo h1 {
-      font-size: 3rem;
+      font-size: 2rem;
+      color: #004080; /* dark blue */
       font-weight: 700;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      margin: 30px 0;
     }
 
-    .store-logo span {
-      color: #FFD966; /* subtle yellow accent */
-    }
-
+    /* Store Info */
     .store-info {
-      margin: 30px auto;
-      max-width: 700px;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
       font-size: 1.1rem;
-      color: #fff;
-      background-color: rgba(11, 61, 145, 0.1);
+      color: #003366;
+      background: #CCE5FF;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
+    /* Store Images */
     .store-images {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .store-images img {
-      max-width: 300px;
-      width: 100%;
+      width: 300px;
       border-radius: 12px;
-      border: 3px solid #ffffff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s;
     }
 
     .store-images img:hover {
       transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,64,128,0.5);
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #0B3D91;
-      color: white;
-      border-radius: 8px;
+    /* Back Button Bottom Left */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button a {
       text-decoration: none;
+      color: #004080;
       font-weight: 600;
-      transition: background-color 0.3s;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #004080;
+      border-radius: 8px;
+      background: #CCE5FF;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    a.back:hover {
-      background-color: #4A90E2;
+    .back-button a:hover {
+      background-color: #004080;
+      color: #CCE5FF;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004080;
+      color: #CCE5FF;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .store-images img {
+        width: 90%;
+      }
+
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
-<body>
+<body class="tech-page">
 
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+      <img src="images/techworldlogo.png" alt="Tech World Logo">
+    </div>
+  </header>
+
+  <!-- Store Logo -->
   <div class="store-logo">
-    <h1>Tech <span>World</span></h1>
+    <span class="logo-icon">💻</span>
+    <span class="logo-text">Tech World</span>
   </div>
 
+  <!-- Store Info -->
   <div class="store-info">
     <p>Discover the latest gadgets, electronics, and tech accessories at Tech World. Quality and innovation for every tech enthusiast.</p>
   </div>
 
+  <!-- Store Images -->
   <div class="store-images">
     <img src="images/techshopping.jpg" alt="Tech Shopping">
     <img src="images/techshopper.jpg" alt="Tech Shopper">
   </div>
 
-  <a href="shops.html" class="back">← Back to Shops</a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="shops.html">Back to Shops</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
+  
