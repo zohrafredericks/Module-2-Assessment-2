@@ -329,6 +329,7 @@ p {
 /* Header */
 .classic-shoes-page header {
   background-color: #FF6600;
+  justify-content: space-between;
 }
 
 .classic-shoes-page header nav a {
@@ -340,7 +341,7 @@ p {
   color: #FFD580;
 }
 
-/* Store Logo */
+/* Store Logo Text */
 .classic-shoes-page .store-logo {
   text-align: center;
   font-size: 2.8rem;
@@ -349,10 +350,11 @@ p {
   font-weight: 700;
 }
 
-/* Shop Logo Image */
+/* Shop Logo Image Top Right */
 .classic-shoes-page .shop-logo {
-  display: block;
-  margin: 0 auto 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   width: 160px;
   height: auto;
   animation: bounce 2s infinite;
@@ -403,10 +405,28 @@ p {
   box-shadow: 0 6px 16px rgba(255,102,0,0.5);
 }
 
-/* Back Button */
+/* ------------------------------- Back Button Fixed Bottom Left --------------------------------*/
+.classic-shoes-page .back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  z-index: 1000;
+  display: flex;
+}
+
 .classic-shoes-page .back-button a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
   color: #FF6600;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 20px;
   border: 2px solid #FF6600;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .classic-shoes-page .back-button a:hover {
@@ -414,11 +434,22 @@ p {
   color: white;
 }
 
+.classic-shoes-page .back-button img {
+  width: 25px;
+  height: 25px;
+}
+
 /* Footer */
 .classic-shoes-page footer {
   background: #FF6600;
   color: white;
 }
+
+
+
+
+
+
 
 
 
