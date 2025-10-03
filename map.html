@@ -3,107 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mall Map - Pine City</title>
+  <title>Map - Pine City Mall</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
+
   <style>
-    body {
+    body.map-page {
       font-family: 'Baloo 2', cursive;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      background: #d0f0fd; /* soft light blue */
+      min-height: 100%;
+      color: #0B3D91;
       text-align: center;
+      padding-bottom: 100px; /* space for back button */
     }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: #0B3D91;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #66BB6A;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    /* Map Container */
     .map-container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 10px;
-      position: relative;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
     }
+
     .map-container img {
       width: 100%;
-      border: 3px solid #333;
-      border-radius: 10px;
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 2rem;
-      color: #222;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #444;
-      max-width: 700px;
-      margin: 10px auto 20px auto;
-      line-height: 1.6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* Marker styles */
-    .marker {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      transform: translate(-50%, -50%);
-      transition: transform 0.2s;
-    }
-    .marker:hover {
-      transform: scale(1.2) translate(-50%, -50%);
-    }
-
-    /* Example positions (adjust these for your map.jpg) */
-    .cinema { top: 30%; left: 70%; }
-    .bathrooms { top: 50%; left: 20%; }
-    .foodcourt { top: 65%; left: 60%; }
-
-    .back-btn {
+    /* Back Button Bottom Left */
+    .back-button {
       position: fixed;
       bottom: 20px;
       left: 20px;
+      z-index: 1000;
     }
-    .back-btn img {
-      width: 50px;
-      height: auto;
-      cursor: pointer;
-      transition: transform 0.2s;
+
+    .back-button a {
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #0B3D91;
+      border-radius: 8px;
+      background: #f0f8ff; /* AliceBlue background */
+      transition: background-color 0.3s, color 0.3s;
     }
-    .back-btn img:hover {
-      transform: scale(1.1);
+
+    .back-button a:hover {
+      background-color: #0B3D91;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0B3D91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border: none;
+      box-shadow: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .map-container {
+        margin: 20px auto;
+        padding: 10px;
+      }
+
+      .back-button a {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        height: 50px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .back-button a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
     }
   </style>
 </head>
-<body>
+<body class="map-page">
 
-  <!-- Map Heading & Description -->
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
+    </div>
+  </header>
+
+  <!-- Map Image -->
   <div class="map-container">
-    <h1>Mall Map</h1>
-    <p>
-      Use this map to easily find your way around the mall.  
-      Click on the icons to explore locations like the cinema, bathrooms, and food court.  
-    </p>
-
-    <!-- Map Image -->
-    <img src="map.jpg" alt="Mall Map">
-
-    <!-- Clickable Markers -->
-    <a href="movie-theatre.html" title="Cinema">
-      <img src="movies-icon.png" alt="Cinema" class="marker cinema">
-    </a>
-
-    <a href="contact.html" title="Bathrooms & Facilities">
-      <img src="information-icon.png" alt="Bathrooms" class="marker bathrooms">
-    </a>
-
-    <a href="shops.html" title="Food Court">
-      <img src="food-eatery.jpg" alt="Food Court" class="marker foodcourt">
-    </a>
+    <img src="images/map.jpg" alt="Pine City Mall Map">
   </div>
 
-  <!-- Back button (fixed bottom-left) -->
-  <div class="back-btn">
-    <a href="index.html">
-      <img src="back-arrow.png" alt="Go Back">
-    </a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">Back to Home</a>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
 
 </body>
 </html>
+
+  
