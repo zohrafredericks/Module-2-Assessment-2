@@ -13,22 +13,58 @@
 
   <style>
     /* Page specific styling */
+    body {
+      background-color: #fff;
+      color: #333;
+      font-family: 'Baloo 2', sans-serif;
+    }
+
+    header {
+      background-color: #FF6600; /* vibrant orange */
+      padding: 15px 0;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #FFD580; /* light orange highlight */
+    }
+
     .store-logo {
       text-align: center;
-      font-size: 2.5rem;
-      color: #FF6347; /* Tomato */
-      margin: 30px 0 15px;
+      font-size: 2.8rem;
+      color: #FF6600;
+      margin: 30px 0 10px;
       font-weight: 700;
+    }
+
+    /* Shop Logo Image */
+    .shop-logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 160px;
+      height: auto;
+      animation: bounce 2s infinite;
     }
 
     .store-info {
       text-align: center;
-      color: #4A90E2;
-      font-size: 1.1rem;
+      color: #333;
+      font-size: 1.2rem;
       margin-bottom: 25px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      background: #FFF5E6; /* soft orange background box */
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .store-images {
@@ -40,16 +76,17 @@
     }
 
     .store-images img {
-      width: auto;        /* avoids stretching */
-      max-width: 300px;   /* matches home page cards */
-      height: auto;       /* preserves aspect ratio */
+      width: auto;
+      max-width: 300px;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .store-images img:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(255,102,0,0.5); /* orange glow */
     }
 
     /* Back Button */
@@ -64,23 +101,44 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
-      color: #0B3D91;
+      color: #FF6600;
       font-weight: 600;
       font-size: 1.1rem;
       padding: 10px 20px;
-      border: 2px solid #0B3D91;
+      border: 2px solid #FF6600;
       border-radius: 8px;
       transition: background-color 0.3s, color 0.3s;
     }
 
     .back-button a:hover {
-      background-color: #0B3D91;
+      background-color: #FF6600;
       color: white;
     }
 
     .back-button img {
       width: 25px;
       height: 25px;
+    }
+
+    /* Bounce Animation */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    footer {
+      background: #FF6600;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
     }
 
     /* Responsive */
@@ -97,7 +155,7 @@
   <header>
     <div class="logo">
       <a href="index.html">
-        <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
+        <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo" style="height:60px;">
       </a>
     </div>
 
@@ -121,6 +179,7 @@
 
   <!-- Store Logo -->
   <div class="store-logo">Classic Shoes</div>
+  <img src="images/classicshoeslogo.png" alt="Classic Shoes Logo" class="shop-logo">
 
   <!-- Store Info -->
   <div class="store-info">
@@ -141,7 +200,5 @@
 </body>
 </html>
 
-
- 
-
-
+  
+  
