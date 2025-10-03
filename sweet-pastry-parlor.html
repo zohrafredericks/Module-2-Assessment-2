@@ -3,46 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Pastry Parlor - Pine City Mall</title>
+  <title>Gigi's Hair & Nails Salon - Pine City Mall</title>
+  
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
+  
   <style>
-    body {
+    body.gigis-page {
       font-family: 'Baloo 2', cursive;
-      background: linear-gradient(to right, #ffb6c1, #ffe4e1); /* candy-floss strawberry gradient */
+      background: linear-gradient(to right, #e6e6fa, #f0fff0); /* soft lavender to mint gradient */
       min-height: 100%;
-      color: #d62828;
+      color: #4b3f72; /* calm muted purple */
       text-align: center;
-      padding: 20px;
+      padding-bottom: 100px; /* space for fixed back button */
     }
 
-    /* Store Logo - Fun Candy Floss Style */
+    /* Header */
+    header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 30px;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #4b3f72;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #9370db;
+    }
+
+    .logo {
+      margin-left: auto; /* push logo top-right */
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    /* Store Logo Text */
     .store-logo h1 {
       font-size: 3rem;
       font-weight: 700;
-      color: #ff69b4; /* playful pink */
-      text-shadow: 1px 1px 3px rgba(255,182,193,0.5);
+      color: #9370db; /* soft lavender */
+      text-shadow: 1px 1px 3px rgba(147,112,219,0.5);
+      margin: 30px 0;
     }
 
+    /* Store Info */
     .store-info {
-      margin: 30px auto;
       max-width: 700px;
+      margin: 0 auto 40px auto;
       font-size: 1.1rem;
-      color: #8b0000; /* darker red for readability */
-      background-color: rgba(255, 240, 245, 0.7);
+      color: #4b3f72;
+      background-color: rgba(255, 250, 250, 0.8);
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
+    /* Store Images */
     .store-images {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .store-images img {
@@ -58,39 +98,94 @@
       transform: scale(1.03);
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #ff69b4;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
+    /* Back Button Bottom Left */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
     }
 
-    a.back:hover {
-      background-color: #ff1493;
+    .back-button a {
+      text-decoration: none;
+      color: #4b3f72;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #4b3f72;
+      border-radius: 8px;
+      background: #f0fff0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #9370db;
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #9370db;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .store-images img {
+        width: 90%;
+      }
+
+      nav {
+        justify-content: center;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
-<body>
+<body class="gigis-page">
 
+  <!-- Header with Navigation -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+      <img src="images/gigislogo.png" alt="Gigi's Salon Logo">
+    </div>
+  </header>
+
+  <!-- Store Logo -->
   <div class="store-logo">
-    <h1>Sweet Pastry Parlor</h1>
+    <h1>Gigi's Hair & Nails Salon</h1>
   </div>
 
+  <!-- Store Info -->
   <div class="store-info">
-    <p>Sweet Pastry Parlor offers delicious pastries, cakes, and treats that taste as delightful as they look! Perfect for a sweet indulgence or a gift for someone special.</p>
+    <p>Gigi's Hair & Nails Salon provides a serene and relaxing environment for haircuts, styling, and nail care. Treat yourself to a moment of relaxation and beauty.</p>
   </div>
 
+  <!-- Store Images -->
   <div class="store-images">
-    <img src="images/bakeryshop.jpg" alt="Bakery Shop">
-    <img src="images/foodeatery.jpg" alt="Food Eatery">
+    <img src="images/hairsalon.jpg" alt="Hair Salon">
+    <img src="images/nails.jpg" alt="Nail Care">
   </div>
 
-  <a href="shops.html" class="back">← Back to Shops</a>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="shops.html">Back to Shops</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
 
 </body>
 </html>
