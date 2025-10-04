@@ -117,6 +117,14 @@ header nav a {
   max-width: 1200px;
 }
 
+/* ------------------------------- Featured Stores Heading --------------------------------*/
+.featured-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--orange-dark);
+  margin: 40px 0 20px;
+}
+
 /* ------------------------------- Featured / Cards --------------------------------*/
 .featured, .prize-container {
   display: flex;
@@ -176,39 +184,52 @@ header nav a {
 .lucky-drawer {
   text-align: center;
   margin: 0 auto 60px auto;
-  padding: 20px;
-  background-color: #fff8f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #ffe5d0, #fff8f0);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   max-width: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lucky-drawer::before {
+  content: "🎁";
+  font-size: 4rem;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  opacity: 0.15;
 }
 
 .lucky-drawer button {
   background-color: var(--orange-dark);
   color: #fff;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  border-radius: 12px;
+  padding: 18px 35px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .lucky-drawer button:hover {
   background-color: var(--orange-light);
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .winner {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  margin-top: 25px;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--orange-dark);
   background-color: #fff3e6;
-  padding: 12px 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* ------------------------------- Back Button (Classic Shoes) --------------------------------*/
@@ -307,9 +328,10 @@ header nav a {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--orange-dark);
+  background-color: var(--blue-dark);
   color: white;
   margin-top: 40px;
+  border-radius: 0; /* removed orange border */
 }
 
 /* ------------------------------- Headings --------------------------------*/
@@ -352,9 +374,6 @@ p {
   h2 { font-size: 1.5rem; }
   .hero p { font-size: 1rem; }
 }
-
-
-
 
 
 
