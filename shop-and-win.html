@@ -86,7 +86,8 @@
       border-radius: 30px;
       transition: 0.3s ease;
       box-shadow: 0 0 12px #00eaff, 0 0 20px #00bcd4;
-      cursor: pointer; /* visually active */
+      cursor: pointer;
+      border: none;
     }
 
     body.shop-win-page .enter-btn:hover {
@@ -147,8 +148,8 @@
     <p>Every time you shop at Pine City Mall, scan your receipt’s barcode at our <strong>Shop & Win kiosks</strong>.  
     Each scan gives you <strong>an extra entry</strong> into the lucky draw — the more you shop, the higher your chances of winning amazing prizes!</p>
     
-    <!-- Enter Now Button (non-link) -->
-    <a class="enter-btn">Enter Now</a>
+    <!-- Enter Now Button (inactive) -->
+    <button class="enter-btn" onclick="alert('Enter Now feature coming soon!')">Enter Now</button>
   </div>
 
   <!-- Footer -->
@@ -158,3 +159,4 @@
 
 </body>
 </html>
+
