@@ -20,6 +20,7 @@
       color: #0B3D91;
       text-align: center;
       padding: 20px;
+      padding-bottom: 100px; /* space for back button */
     }
 
     /* Shops Grid */
@@ -121,16 +122,49 @@
       border-color: #0B3D91;
     }
 
+    /* Back Button Bottom Left */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #0B3D91;
+      border-radius: 8px;
+      background: #f0f8ff; /* AliceBlue background */
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #0B3D91;
+      color: white;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .shop-card {
         width: 45%;
+      }
+      .back-button a {
+        font-size: 1rem;
+        padding: 8px 15px;
       }
     }
 
     @media (max-width: 480px) {
       .shop-card {
         width: 90%;
+      }
+      .back-button a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
       }
     }
 
@@ -244,6 +278,11 @@
     </div>
   </div>
 
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">Back to Home</a>
+  </div>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 Pine City Mall. All rights reserved.
@@ -273,9 +312,4 @@
 
 </body>
 </html>
-
-  
-   
-   
- 
 
