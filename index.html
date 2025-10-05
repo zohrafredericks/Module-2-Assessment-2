@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Featured Stores Heading */
+    /* -------------------- Featured Stores -------------------- */
     .featured-heading {
       text-align: center;
       font-size: 2.5rem;
@@ -21,7 +21,6 @@
       margin-bottom: 20px;
     }
 
-    /* Featured Stores Flex Layout */
     .featured-cards-container {
       display: flex;
       flex-wrap: wrap;
@@ -58,13 +57,19 @@
       color: #7aa7d9;
     }
 
-    /* Remove underline from featured store links */
     .featured-card a {
       text-decoration: none;
       color: inherit;
     }
 
-    /* Sale Poster Section */
+    @media (max-width: 768px) {
+      .featured-cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* -------------------- Sale Posters -------------------- */
     .poster-container {
       display: flex;
       justify-content: center;
@@ -74,7 +79,8 @@
     }
 
     .poster-container img {
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
       height: 200px;
       object-fit: cover;
       border-radius: 12px;
@@ -82,17 +88,10 @@
       transition: all 0.3s ease;
     }
 
-    @media (max-width: 1024px) {
-      .poster-container img {
-        width: 250px;
-        height: 170px;
-      }
-    }
-
     @media (max-width: 768px) {
       .poster-container img {
-        width: 80%;
-        height: auto;
+        max-width: 250px;
+        height: 180px;
       }
     }
 
@@ -103,7 +102,7 @@
       }
     }
 
-    /* Hero Section */
+    /* -------------------- Hero Section -------------------- */
     .hero {
       text-align: center;
       padding: 50px 20px;
@@ -139,7 +138,7 @@
       background-color: #7aa7d9;
     }
 
-    /* Shop & Win Section */
+    /* -------------------- Shop & Win Section -------------------- */
     .shop-and-win {
       text-align: center;
       margin: 50px 20px;
@@ -187,7 +186,6 @@
       transition: all 0.5s ease;
     }
 
-    /* Spin/Flash Animation */
     @keyframes spinFlash {
       0% { transform: rotate(0deg) scale(1); background-color: #e67e22; }
       25% { transform: rotate(10deg) scale(1.1); background-color: #f39c12; }
@@ -198,14 +196,6 @@
 
     .spin-flash {
       animation: spinFlash 1s ease-in-out;
-    }
-
-    /* Responsive Adjustments for Featured Stores */
-    @media (max-width: 768px) {
-      .featured-cards-container {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
@@ -316,20 +306,14 @@
     const winText = document.getElementById('winText');
 
     winBtn.addEventListener('click', () => {
-      // Add spin-flash animation
       winBtn.classList.add('spin-flash');
-
-      // Show temporary "Spinning..." text
       winText.textContent = "Spinning...";
       winText.style.opacity = 0.5;
 
-      // After 1 second, show prize and remove animation
       setTimeout(() => {
         const winner = prizes[Math.floor(Math.random() * prizes.length)];
         winText.textContent = `🎉 Congratulations! You won: ${winner}`;
         winText.style.opacity = 1;
-
-        // Remove animation class for next click
         winBtn.classList.remove('spin-flash');
       }, 1000);
     });
@@ -337,10 +321,3 @@
 
 </body>
 </html>
-
-
-   
-
-
-   
-  
