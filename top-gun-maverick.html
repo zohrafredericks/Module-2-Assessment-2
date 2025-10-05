@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Gun: Maverick - Pine City Mall Movies</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      /* Sky blue gradient */
+      background: linear-gradient(to bottom, #a0d8f1 0%, #ffffff 100%);
+      color: #1b1b2f;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 100px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav a {
+      margin-right: 15px;
+      color: #1b1b2f;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    header .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .movie-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f39c12;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      margin: 30px 0 20px 0;
+    }
+
+    .movie-info {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
+      color: #1b1b2f;
+    }
+
+    .movie-poster {
+      max-width: 400px;
+      width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      margin-top: 30px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: #f39c12;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #f39c12;
+      border-radius: 8px;
+      background: #ffffff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #f39c12;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #1b1b2f;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .movie-poster {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="shops.html">Shops</a>
+      <a href="shop-and-win.html">Shop & Win</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo">
+      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
+    </div>
+  </header>
+
+  <div class="main-content">
+    <!-- Movie Title -->
+    <h1 class="movie-title">Top Gun: Maverick</h1>
+
+    <!-- Movie Poster -->
+    <img src="images/topgunmaverick.jpg" alt="Top Gun: Maverick Movie Poster" class="movie-poster">
+
+    <!-- Movie Info -->
+    <div class="movie-info">
+      <p>After more than thirty years of service, Pete "Maverick" Mitchell continues to push the limits as a top naval aviator. Experience thrilling aerial stunts, high-speed action, and a tribute to legacy and camaraderie.</p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button">
+      <a href="movies.html">Back to Movies</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Pine City Mall. All rights reserved.
+  </footer>
+
+</body>
+</html>
