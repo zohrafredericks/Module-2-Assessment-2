@@ -17,6 +17,7 @@
       color: #ffffff;
       text-align: center;
       min-height: 100vh;
+      padding-bottom: 100px; /* space for back button */
     }
 
     a {
@@ -115,6 +116,31 @@
       transform: scale(1.05);
     }
 
+    /* -------------------- Back Button -------------------- */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: #FFD700;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      background: #111111;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #FFD700;
+      color: #111111;
+    }
+
     /* -------------------- Footer -------------------- */
     footer {
       margin-top: 40px;
@@ -191,6 +217,11 @@
     </div>
   </div>
 
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">Back to Home</a>
+  </div>
+
   <!-- Footer -->
   <footer>
     &copy; 2025 Pine City Mall. All rights reserved.
@@ -198,3 +229,4 @@
 
 </body>
 </html>
+
