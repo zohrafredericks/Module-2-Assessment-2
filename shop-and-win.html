@@ -97,6 +97,26 @@
       box-shadow: 0 0 18px #1de9b6, 0 0 28px #00eaff;
     }
 
+    /* Back Button */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #00eaff;
+      color: #0f2027;
+      padding: 10px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 12px #00eaff;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #1de9b6;
+      box-shadow: 0 0 18px #1de9b6, 0 0 28px #00eaff;
+    }
+
     /* Footer */
     body.shop-win-page footer {
       background-color: #0B3D91;
@@ -116,6 +136,7 @@
       <a href="index.html">Home</a>
       <a href="map.html">Map</a>
       <a href="shops.html">Shops</a>
+      <a href="movies.html">Movies</a>
       <a href="shop-and-win.html">Shop & Win</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -134,16 +155,18 @@
     <img src="images/winners.jpg" alt="Lucky Shoppers" width="400" height="auto">
   </div>
 
-  <!-- Barcode Section (just before footer) -->
+  <!-- Barcode Section -->
   <div class="barcode-section">
     <img src="images/barcodeicon.png" alt="Scan Barcode" class="barcode-icon">
     <h2>📲 Scan & Win!</h2>
     <p>Every time you shop at Pine City Mall, scan your receipt’s barcode at our <strong>Shop & Win kiosks</strong>.  
     Each scan gives you <strong>an extra entry</strong> into the lucky draw — the more you shop, the higher your chances of winning amazing prizes!</p>
     
-    <!-- Enter Now Button (inactive) -->
     <button class="enter-btn" onclick="alert('Enter Now feature coming soon!')">Enter Now</button>
   </div>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
 
   <!-- Footer -->
   <footer>
@@ -152,6 +175,9 @@
 
 </body>
 </html>
+
+  
+ 
 
   
   
