@@ -8,39 +8,127 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Link to external CSS -->
+  <!-- Master CSS -->
   <link rel="stylesheet" href="style.css">
 
   <style>
     body.map-page {
       font-family: 'Baloo 2', cursive;
-      background: #d0f0fd; /* soft light blue */
+      background-color: #f0f8ff; /* AliceBlue */
       text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      padding-bottom: 100px; /* space for back button */
+      color: #0B3D91;
     }
 
-    /* Logo Resize Only */
-    .logo img {
-      width: 200px;
-      height: 200px;
+    header {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    nav a {
+      color: #0B3D91;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 5px 10px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #66BB6A;
+      text-shadow: 0 0 4px #66BB6A;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .map-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Back Button Bottom Left */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #0B3D91;
+      border-radius: 8px;
+      background: #f0f8ff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #0B3D91;
+      color: white;
+    }
+
+    footer {
+      background-color: #0B3D91;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .map-container {
+        width: 95%;
+      }
+      .back-button a {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .back-button a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+      }
     }
   </style>
 </head>
 <body class="map-page">
 
-  <!-- Header with Navigation -->
+  <!-- Header Navigation -->
   <header>
     <nav>
       <a href="index.html">Home</a>
       <a href="map.html">Map</a>
       <a href="shops.html">Shops</a>
+      <a href="movies.html">Movies</a>
       <a href="shop-and-win.html">Shop & Win</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="logo">
-      <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
-    </div>
   </header>
+
+  <!-- Movies Heading Section -->
+  <section class="movies-link-section">
+    <h2><a href="movies.html" style="color:#0B3D91; text-decoration:none;">🎬 Movies</a></h2>
+    <p>Check out the latest blockbusters and movie showtimes!</p>
+  </section>
 
   <!-- Map Image -->
   <div class="map-container">
@@ -60,6 +148,3 @@
 </body>
 </html>
 
-    
-    
-   
