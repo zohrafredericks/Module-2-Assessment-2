@@ -41,7 +41,7 @@
     }
 
     .featured-card img {
-      width: auto; /* keep original featured store image sizing */
+      width: auto;
       height: auto;
       border-radius: 12px;
       margin-bottom: 10px;
@@ -64,7 +64,7 @@
       color: inherit;
     }
 
-    /* Sale Poster Section - uniform and responsive */
+    /* Sale Poster Section */
     .poster-container {
       display: flex;
       justify-content: center;
@@ -74,9 +74,9 @@
     }
 
     .poster-container img {
-      width: 300px;        /* fixed width on desktop */
-      height: 200px;       /* fixed height on desktop */
-      object-fit: cover;   /* crop excess, maintain aspect */
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
@@ -139,37 +139,65 @@
       background-color: #7aa7d9;
     }
 
-    /* Lucky Drawer Section */
-    .lucky-drawer {
+    /* Shop & Win Section */
+    .shop-and-win {
       text-align: center;
       margin: 50px 20px;
-      padding: 20px;
-      background: rgba(255,255,255,0.9);
+      padding: 30px;
+      background: linear-gradient(135deg, #fff4e6, #ffd9b3);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
-    .lucky-drawer button {
-      background-color: #4a90e2;
+    .shop-and-win h2 {
+      font-size: 2rem;
+      color: #e67e22;
+      margin-bottom: 15px;
+    }
+
+    .shop-and-win p {
+      font-size: 1.1rem;
+      color: #d35400;
+      margin-bottom: 25px;
+    }
+
+    .shop-and-win button {
+      background-color: #e67e22;
       color: white;
-      padding: 12px 24px;
+      padding: 14px 30px;
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
     }
 
-    .lucky-drawer button:hover {
-      background-color: #7aa7d9;
+    .shop-and-win button:hover {
+      background-color: #f39c12;
+      transform: scale(1.05);
     }
 
-    .winner {
-      margin-top: 15px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #4a90e2;
+    .shop-and-win .winner {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #d35400;
+      min-height: 40px;
+      transition: all 0.5s ease;
+    }
+
+    /* Spin/Flash Animation */
+    @keyframes spinFlash {
+      0% { transform: rotate(0deg) scale(1); background-color: #e67e22; }
+      25% { transform: rotate(10deg) scale(1.1); background-color: #f39c12; }
+      50% { transform: rotate(-10deg) scale(1.1); background-color: #e67e22; }
+      75% { transform: rotate(10deg) scale(1.1); background-color: #f39c12; }
+      100% { transform: rotate(0deg) scale(1); background-color: #e67e22; }
+    }
+
+    .spin-flash {
+      animation: spinFlash 1s ease-in-out;
     }
 
     /* Responsive Adjustments for Featured Stores */
@@ -261,12 +289,12 @@
     </div>
   </section>
 
-  <!-- Lucky Drawer Section -->
-  <section class="lucky-drawer">
-    <h2>Try Your Luck!</h2>
-    <p>Click the button below for a chance to win exciting prizes:</p>
-    <button id="drawBtn">Draw Now</button>
-    <div class="winner" id="winnerText"></div>
+  <!-- Shop & Win Section -->
+  <section class="shop-and-win">
+    <h2>Shop & Win!</h2>
+    <p>Shop at any of our featured stores and try your luck to win amazing prizes!</p>
+    <button id="winBtn">Try Your Luck</button>
+    <div class="winner" id="winText"></div>
   </section>
 
   <!-- Footer -->
@@ -274,25 +302,44 @@
     &copy; 2025 Pine City Mall. All rights reserved.
   </footer>
 
-  <!-- Lucky Drawer Script -->
+  <!-- Shop & Win Script -->
   <script>
     const prizes = [
-      "Free Movie Tickets",
-      "Discount Voucher",
-      "Gift Hamper",
-      "Free Coffee",
-      "Shopping Voucher"
+      "🎬 Free Movie Tickets",
+      "💸 Discount Voucher",
+      "🎁 Gift Hamper",
+      "☕ Free Coffee",
+      "🛍 Shopping Voucher"
     ];
-    const drawBtn = document.getElementById('drawBtn');
-    const winnerText = document.getElementById('winnerText');
-    drawBtn.addEventListener('click', () => {
-      const winner = prizes[Math.floor(Math.random() * prizes.length)];
-      winnerText.textContent = `🎉 Congratulations! You won: ${winner}`;
+
+    const winBtn = document.getElementById('winBtn');
+    const winText = document.getElementById('winText');
+
+    winBtn.addEventListener('click', () => {
+      // Add spin-flash animation
+      winBtn.classList.add('spin-flash');
+
+      // Show temporary "Spinning..." text
+      winText.textContent = "Spinning...";
+      winText.style.opacity = 0.5;
+
+      // After 1 second, show prize and remove animation
+      setTimeout(() => {
+        const winner = prizes[Math.floor(Math.random() * prizes.length)];
+        winText.textContent = `🎉 Congratulations! You won: ${winner}`;
+        winText.style.opacity = 1;
+
+        // Remove animation class for next click
+        winBtn.classList.remove('spin-flash');
+      }, 1000);
     });
   </script>
 
 </body>
 </html>
+
+
+   
 
 
    
