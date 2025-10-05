@@ -12,6 +12,96 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* -------------------- Featured Stores -------------------- */
+    .featured-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #4a90e2;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .featured-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .featured-card {
+      flex: 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .featured-card img {
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .featured-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.4rem;
+      color: #4a90e2;
+    }
+
+    .featured-card p {
+      font-size: 1rem;
+      color: #7aa7d9;
+    }
+
+    .featured-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 768px) {
+      .featured-cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* -------------------- Sale Posters -------------------- */
+    .poster-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .poster-container img {
+      width: 100%;
+      max-width: 320px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .poster-container img {
+        max-width: 280px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .poster-container img {
+        width: 95%;
+        height: auto;
+      }
+    }
+
     /* -------------------- Hero Section -------------------- */
     .hero {
       text-align: center;
@@ -46,159 +136,6 @@
 
     .btn-hero:hover {
       background-color: #7aa7d9;
-    }
-
-    /* -------------------- Sale Posters -------------------- */
-    .poster-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 30px 0;
-    }
-
-    .poster-container img {
-      width: 100%;
-      max-width: 350px;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-
-    @media (max-width: 768px) {
-      .poster-container img {
-        max-width: 300px;
-        height: 200px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .poster-container img {
-        width: 95%;
-        height: auto;
-      }
-    }
-
-    /* -------------------- Featured Stores -------------------- */
-    .featured-heading {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #4a90e2;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .featured-cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .featured-card {
-      flex: 0 0 300px;
-      display: flex;
-      flex-direction: column;
-      background: rgba(255,255,255,0.9);
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .featured-card:hover {
-      transform: scale(1.03);
-    }
-
-    .featured-card img {
-      width: auto;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
-
-    .featured-card h3 {
-      margin: 10px 0 5px;
-      font-size: 1.4rem;
-      color: #4a90e2;
-    }
-
-    .featured-card p {
-      font-size: 1rem;
-      color: #7aa7d9;
-    }
-
-    .featured-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    @media (max-width: 768px) {
-      .featured-cards-container {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    /* -------------------- Movie Promo Section -------------------- */
-    .movie-promo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      margin: 40px auto;
-      padding: 20px 25px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      text-align: center;
-      color: #fff;
-      background: linear-gradient(135deg, #6dd5fa, #2980b9); /* ice-blue gradient */
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      max-width: 900px;
-    }
-
-    .movie-promo:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-    }
-
-    .movie-promo img.movie-icon {
-      width: 50px;
-      height: 50px;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .movie-promo p {
-      margin: 0;
-      font-size: 1.4rem;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .btn-movie {
-      margin-left: 15px;
-      padding: 10px 20px;
-      background-color: #f39c12;
-      color: #fff;
-      border-radius: 10px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .btn-movie:hover {
-      background-color: #e67e22;
-      transform: scale(1.05);
     }
 
     /* -------------------- Shop & Win Section -------------------- */
@@ -261,6 +198,52 @@
       animation: spinFlash 1s ease-in-out;
     }
 
+    /* -------------------- Movies Highlight Section -------------------- */
+    .movies-highlight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e90ff, #87cefa);
+      color: #fff;
+      padding: 25px 20px;
+      border-radius: 15px;
+      margin: 30px auto;
+      max-width: 900px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movies-highlight:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .movies-highlight img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      vertical-align: middle;
+    }
+
+    .movies-highlight p {
+      display: inline-block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .movies-highlight {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .movies-highlight img {
+        margin: 0 0 15px 0;
+      }
+    }
   </style>
 </head>
 <body class="home-page">
@@ -289,7 +272,7 @@
   <!-- Sale Poster Section -->
   <section class="sale-poster">
     <div class="poster-container">
-      <img src="images/saleposter1.jpg" alt="Mega Sale Poster">
+      <img src="images/saleposter.jpg" alt="Mega Sale Poster">
       <img src="images/familyshopping.jpg" alt="Family Shopping">
       <img src="images/shopandwin.jpg" alt="Shop & Win">
     </div>
@@ -344,12 +327,11 @@
     </div>
   </section>
 
-  <!-- Movie Promo Section -->
-  <div class="movie-promo">
-    <img src="images/moviesicon.png" alt="Movies Icon" class="movie-icon">
-    <p>🎬 After shopping, check out the latest blockbusters in our upgraded movie theatre!</p>
-    <a href="movies.html" class="btn-movie">🎟️ Book Your Seat Now!</a>
-  </div>
+  <!-- Movies Highlight Section -->
+  <section class="movies-highlight">
+    <img src="images/moviesicon.png" alt="Movies Icon">
+    <p>🎬 After shopping, check out the latest blockbusters in our upgraded movie theatre! 🎟️ Book Your Tickets Now!</p>
+  </section>
 
   <!-- Shop & Win Section -->
   <section class="shop-and-win">
@@ -394,9 +376,9 @@
 </body>
 </html>
 
-  
-      
-    
  
-  
+
+     
  
+         
+     
