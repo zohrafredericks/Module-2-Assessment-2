@@ -21,15 +21,17 @@
       margin-bottom: 10px;
     }
 
-    /* Featured Stores Grid */
+    /* Featured Stores Flex Layout */
     .featured-cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
       margin-top: 20px;
     }
 
     .featured-card {
+      flex: 0 0 300px; /* fixed width for each card */
       display: flex;
       flex-direction: column;
       background: rgba(255,255,255,0.9);
@@ -147,7 +149,8 @@
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .featured-cards-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
       }
 
       .poster-container img {
@@ -269,5 +272,4 @@
 </body>
 </html>
 
-  
-   
+
