@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Pine City Mall</title>
-  
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
 
@@ -15,16 +15,18 @@
     body.about-page {
       font-family: 'Baloo 2', cursive;
       background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* soft light blue */
-      min-height: 100%;
-      color: #0B3D91;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
+      padding-bottom: 100px; /* space for back button */
+      color: #0B3D91;
     }
 
     header {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
       padding: 15px;
     }
 
@@ -32,16 +34,13 @@
       color: #0B3D91;
       text-decoration: none;
       font-weight: 600;
-      margin: 0 10px;
+      padding: 5px 10px;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
       color: #66BB6A;
-    }
-
-    .logo-container {
-      text-align: center;
-      margin: 30px 0;
+      text-shadow: 0 0 4px #66BB6A;
     }
 
     .logo-container img {
@@ -64,7 +63,7 @@
       margin-top: 20px;
     }
 
-    p {
+    p, ul {
       color: #333;
       line-height: 1.6;
     }
@@ -72,24 +71,41 @@
     ul {
       list-style-type: disc;
       margin-left: 20px;
-      color: #333;
     }
 
-    /* Mall Images */
-    .mall-images {
-      max-width: 900px;
-      margin: 30px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    /* Movies heading section */
+    .movies-link-section {
+      margin: 30px 0;
+    }
+    .movies-link-section a {
+      color: #0B3D91;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
     }
 
-    .mall-images img {
-      width: 100%;
-      max-width: 430px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      color: #0B3D91;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border: 2px solid #0B3D91;
+      border-radius: 8px;
+      background: #f0f8ff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #0B3D91;
+      color: white;
     }
 
     footer {
@@ -110,6 +126,7 @@
       <a href="index.html">Home</a>
       <a href="map.html">Map</a>
       <a href="shops.html">Shops</a>
+      <a href="movies.html">Movies</a>
       <a href="shop-and-win.html">Shop & Win</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -119,6 +136,12 @@
   <div class="logo-container">
     <img src="images/pinecitymalllogo.png" alt="Pine City Mall Logo">
   </div>
+
+  <!-- Movies Heading Section -->
+  <section class="movies-link-section">
+    <h2><a href="movies.html">🎬 Movies</a></h2>
+    <p>Check out the latest blockbusters and movie showtimes!</p>
+  </section>
 
   <!-- Main Content -->
   <div class="content">
@@ -146,12 +169,15 @@
 
     <h2>📍 Location</h2>
     <p>Situated in the heart of Durban, Pine City Mall is easily accessible and offers ample parking for visitors.</p>
+
+    <!-- Images at bottom -->
+    <img src="images/mallinside.jpg" alt="Mall Inside" style="width:100%; max-width:400px; margin: 15px auto; display:block; border-radius:12px;">
+    <img src="images/malloutside.jpg" alt="Mall Outside" style="width:100%; max-width:400px; margin: 15px auto; display:block; border-radius:12px;">
   </div>
 
-  <!-- Mall Images Section -->
-  <div class="mall-images">
-    <img src="images/mallinside.jpg" alt="Inside Pine City Mall">
-    <img src="images/malloutside.jpg" alt="Outside Pine City Mall">
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html">Back to Home</a>
   </div>
 
   <!-- Footer -->
@@ -162,6 +188,9 @@
 </body>
 </html>
 
+ 
+
    
 
  
+
