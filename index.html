@@ -18,7 +18,7 @@
       font-size: 2.5rem;
       color: #4a90e2;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     /* Featured Stores Flex Layout */
@@ -31,7 +31,7 @@
     }
 
     .featured-card {
-      flex: 0 0 300px; /* fixed width for each card */
+      flex: 0 0 300px;
       display: flex;
       flex-direction: column;
       background: rgba(255,255,255,0.9);
@@ -40,11 +40,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* Uniform Featured Store Images */
     .featured-card img {
-      width: 100%;         /* fills the card width */
-      height: 200px;       /* fixed height for uniformity */
-      object-fit: cover;   /* crops image without distortion */
+      width: auto; /* keep original featured store image sizing */
+      height: auto;
       border-radius: 12px;
       margin-bottom: 10px;
     }
@@ -58,7 +56,6 @@
     .featured-card p {
       font-size: 1rem;
       color: #7aa7d9;
-      flex-grow: 1;
     }
 
     /* Remove underline from featured store links */
@@ -67,7 +64,7 @@
       color: inherit;
     }
 
-    /* Sale Poster Section */
+    /* Sale Poster Section - uniform and responsive */
     .poster-container {
       display: flex;
       justify-content: center;
@@ -77,11 +74,33 @@
     }
 
     .poster-container img {
-      max-width: 300px;
-      width: auto;
-      height: auto;
+      width: 300px;        /* fixed width on desktop */
+      height: 200px;       /* fixed height on desktop */
+      object-fit: cover;   /* crop excess, maintain aspect */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1024px) {
+      .poster-container img {
+        width: 250px;
+        height: 170px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .poster-container img {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .poster-container img {
+        width: 95%;
+        height: auto;
+      }
     }
 
     /* Hero Section */
@@ -153,15 +172,11 @@
       color: #4a90e2;
     }
 
-    /* Responsive Adjustments */
+    /* Responsive Adjustments for Featured Stores */
     @media (max-width: 768px) {
       .featured-cards-container {
         flex-direction: column;
         align-items: center;
-      }
-
-      .poster-container img {
-        max-width: 90%;
       }
     }
   </style>
@@ -280,5 +295,5 @@
 </html>
 
 
-
+   
   
