@@ -44,21 +44,29 @@
     .featured-card h3 {
       margin: 10px 0 5px;
       font-size: 1.4rem;
-      color: var(--blue-dark);
+      color: #4a90e2;
     }
 
     .featured-card p {
       font-size: 1rem;
-      color: var(--blue-light);
+      color: #7aa7d9;
     }
 
-    /* Featured Stores Heading - updated to match hero */
-    .featured h2 {
+    /* Featured Stores Heading */
+    .featured-heading {
       text-align: center;
-      font-size: 2.5rem;      /* same as hero h1 */
-      color: var(--blue-dark); /* same color as hero h1 */
-      font-weight: 700;        /* bold, same as hero h1 */
-      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #4a90e2;
+      font-weight: 700;
+      margin-bottom: 10px; /* reduced bottom margin because spacing is now in container */
+    }
+
+    .featured-cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px; /* spacing between heading and first row of cards */
     }
 
     /* Sale Poster Section */
@@ -90,18 +98,18 @@
 
     .hero h1 {
       font-size: 2.5rem;
-      color: var(--blue-dark);
+      color: #4a90e2;
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: var(--blue-light);
+      color: #7aa7d9;
       margin: 15px 0;
     }
 
     .btn-hero {
       display: inline-block;
-      background-color: var(--blue-dark);
+      background-color: #4a90e2;
       color: white;
       padding: 12px 24px;
       border-radius: 8px;
@@ -111,7 +119,7 @@
     }
 
     .btn-hero:hover {
-      background-color: var(--blue-light);
+      background-color: #7aa7d9;
     }
 
     /* Lucky Drawer Section */
@@ -125,7 +133,7 @@
     }
 
     .lucky-drawer button {
-      background-color: var(--blue-dark);
+      background-color: #4a90e2;
       color: white;
       padding: 12px 24px;
       border: none;
@@ -137,14 +145,14 @@
     }
 
     .lucky-drawer button:hover {
-      background-color: var(--blue-light);
+      background-color: #7aa7d9;
     }
 
     .winner {
       margin-top: 15px;
       font-weight: 600;
       font-size: 1.2rem;
-      color: var(--blue-dark);
+      color: #4a90e2;
     }
 
     /* Responsive */
@@ -192,48 +200,50 @@
 
   <!-- Featured Shops Section -->
   <section class="featured">
-    <h2>Featured Stores</h2>
-    <div class="featured-card">
-      <a href="classic-shoes.html">
-        <img src="images/highheels.jpg" alt="Classic Shoes">
-        <h3>Classic Shoes</h3>
-        <p>Step into style with our timeless collection.</p>
-      </a>
-    </div>
-    <div class="featured-card">
-      <a href="fashion-for-all.html">
-        <img src="images/clothingshop.jpg" alt="Fashion For All">
-        <h3>Fashion For All</h3>
-        <p>High-quality clothing for every age and occasion.</p>
-      </a>
-    </div>
-    <div class="featured-card">
-      <a href="tech-world.html">
-        <img src="images/techshopper.jpg" alt="Tech Shopper">
-        <h3>Tech World</h3>
-        <p>Latest gadgets and electronics under one roof.</p>
-      </a>
-    </div>
-    <div class="featured-card">
-      <a href="many-things.html">
-        <img src="images/retailtherapy.jpg" alt="Many Things Store">
-        <h3>Many Things Store</h3>
-        <p>Everything you need in one convenient shop.</p>
-      </a>
-    </div>
-    <div class="featured-card">
-      <a href="sweet-pastry-parlor.html">
-        <img src="images/bakeryshop.jpg" alt="Sweet Pastry Parlor">
-        <h3>Sweet Pastry Parlor</h3>
-        <p>A candy-floss, strawberry-sweet experience for dessert lovers.</p>
-      </a>
-    </div>
-    <div class="featured-card">
-      <a href="gigis-hair-nails.html">
-        <img src="images/hairsalon.jpg" alt="Gigi's Hair & Nails Salon">
-        <h3>Gigi’s Hair & Nails</h3>
-        <p>Relaxing salon experience with soft, calming vibes.</p>
-      </a>
+    <h2 class="featured-heading">Featured Stores</h2>
+    <div class="featured-cards-container">
+      <div class="featured-card">
+        <a href="classic-shoes.html">
+          <img src="images/highheels.jpg" alt="Classic Shoes">
+          <h3>Classic Shoes</h3>
+          <p>Step into style with our timeless collection.</p>
+        </a>
+      </div>
+      <div class="featured-card">
+        <a href="fashion-for-all.html">
+          <img src="images/clothingshop.jpg" alt="Fashion For All">
+          <h3>Fashion For All</h3>
+          <p>High-quality clothing for every age and occasion.</p>
+        </a>
+      </div>
+      <div class="featured-card">
+        <a href="tech-world.html">
+          <img src="images/techshopper.jpg" alt="Tech Shopper">
+          <h3>Tech World</h3>
+          <p>Latest gadgets and electronics under one roof.</p>
+        </a>
+      </div>
+      <div class="featured-card">
+        <a href="many-things.html">
+          <img src="images/retailtherapy.jpg" alt="Many Things Store">
+          <h3>Many Things Store</h3>
+          <p>Everything you need in one convenient shop.</p>
+        </a>
+      </div>
+      <div class="featured-card">
+        <a href="sweet-pastry-parlor.html">
+          <img src="images/bakeryshop.jpg" alt="Sweet Pastry Parlor">
+          <h3>Sweet Pastry Parlor</h3>
+          <p>A candy-floss, strawberry-sweet experience for dessert lovers.</p>
+        </a>
+      </div>
+      <div class="featured-card">
+        <a href="gigis-hair-nails.html">
+          <img src="images/hairsalon.jpg" alt="Gigi's Hair & Nails Salon">
+          <h3>Gigi’s Hair & Nails</h3>
+          <p>Relaxing salon experience with soft, calming vibes.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -270,6 +280,8 @@
 </body>
 </html>
 
+  
+  
    
    
    
